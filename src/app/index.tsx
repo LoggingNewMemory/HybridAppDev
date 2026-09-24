@@ -135,7 +135,7 @@ export default function LoginScreen() {
             <View style={styles.rightColumn}>
               <View style={styles.googleBtnWrapper}>
                 <TouchableOpacity style={styles.googleButton} onPress={handleGoogleLogin}>
-                  <Text style={styles.googleButtonText}>Login With Google</Text>
+                  <Text style={styles.googleButtonText}>Sign-up or Sign-in With Google</Text>
                   <View style={styles.googleIconContainer}>
                     <Image source={require('../../assets/images/Google.webp')} style={styles.googleIcon} resizeMode="contain" />
                   </View>
