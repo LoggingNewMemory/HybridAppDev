@@ -22,6 +22,7 @@ export default function LoginScreen() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
+  const [time, setTime] = useState(new Date());
   
   const [quoteIndex, setQuoteIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState('');
@@ -68,6 +69,16 @@ export default function LoginScreen() {
     };
   }, [quoteIndex, fadeAnim]);
 
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTime(new Date());
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const hours = time.getHours().toString().padStart(2, '0');
+  const minutes = time.getMinutes().toString().padStart(2, '0');
+
   const handleLogin = () => {
     // Handle login
     console.log("Login with", email, password);
@@ -100,11 +111,11 @@ export default function LoginScreen() {
 
               <View style={styles.clockSection}>
                 <View style={styles.clockContainer}>
-                  <Text style={[styles.clockDigit, styles.clockRed]}>1</Text>
-                  <Text style={styles.clockDigit}>3</Text>
+                  <Text style={[styles.clockDigit, styles.clockRed]}>{hours[0]}</Text>
+                  <Text style={styles.clockDigit}>{hours[1]}</Text>
                   <Text style={styles.clockDigit}>:</Text>
-                  <Text style={[styles.clockDigit, styles.clockPurple]}>2</Text>
-                  <Text style={styles.clockDigit}>1</Text>
+                  <Text style={[styles.clockDigit, styles.clockPurple]}>{minutes[0]}</Text>
+                  <Text style={styles.clockDigit}>{minutes[1]}</Text>
                 </View>
                 <View style={styles.arrowContainer}>
                   <View style={styles.arrowLine} />
