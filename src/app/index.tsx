@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Animated, Dimensions, Image, KeyboardAvoidingView, Platform, SafeAreaView, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 import ZigZagCaptcha from '../components/ZigZagCaptcha';
 
 const QUOTES = [
@@ -163,7 +164,12 @@ export default function LoginScreen() {
                 <View style={styles.passwordHeader}>
                   <Text style={styles.inputLabel}>Password</Text>
                   <TouchableOpacity onPress={() => setShowPassword(!showPassword)}>
-                    <Text style={styles.eyeIcon}>[Eye Logo]</Text>
+                    <Ionicons 
+                      name={showPassword ? "eye-outline" : "eye-off-outline"} 
+                      size={28} 
+                      color="#FFF" 
+                      style={styles.eyeIcon} 
+                    />
                   </TouchableOpacity>
                 </View>
                 <TextInput
@@ -395,7 +401,6 @@ const styles = StyleSheet.create({
   },
   eyeIcon: {
     color: '#FFF',
-    fontSize: 14,
     marginBottom: 8,
   },
   bottomCardSection: {
