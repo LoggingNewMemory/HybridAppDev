@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { StyleSheet, View, Text, TextInput, TouchableOpacity, Image, SafeAreaView, Dimensions, KeyboardAvoidingView, Platform, ScrollView, Animated } from 'react-native';
 import { auth } from '../firebaseConfig';
+import ZigZagCaptcha from '../components/ZigZagCaptcha';
 
 const QUOTES = [
   { text: "Pendidikan adalah senjata paling ampuh yang bisa kamu gunakan untuk mengubah dunia.", author: "Nelson Mandela" },
@@ -163,9 +164,7 @@ export default function LoginScreen() {
                 />
 
                 <View style={styles.bottomCardSection}>
-                  <View style={styles.captchaBox}>
-                    <Text style={styles.captchaText}>[CAPTCHA]</Text>
-                  </View>
+                  <ZigZagCaptcha onVerify={(token) => console.log('Verified:', token)} />
 
                   <TouchableOpacity style={styles.authButton} onPress={handleLogin}>
                     <Text style={styles.authButtonText}>Authenticate</Text>
