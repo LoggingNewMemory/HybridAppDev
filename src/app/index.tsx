@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { StyleSheet, View, Text, TextInput, TouchableOpacity, Image, SafeAreaView, Dimensions, KeyboardAvoidingView, Platform, ScrollView, Animated } from 'react-native';
-import { auth } from '../firebaseConfig';
+import { useEffect, useRef, useState } from 'react';
+import { Animated, Dimensions, Image, KeyboardAvoidingView, Platform, SafeAreaView, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import ZigZagCaptcha from '../components/ZigZagCaptcha';
 
 const QUOTES = [
@@ -384,9 +383,11 @@ const styles = StyleSheet.create({
     borderBottomColor: '#FFF',
     color: '#FFF',
     fontSize: 18,
-    paddingVertical: 8,
+    paddingTop: 12,
+    paddingBottom: 4,
     marginBottom: 32,
-  },
+    ...(Platform.OS === 'web' && { outlineStyle: 'none' }),
+  } as any,
   passwordHeader: {
     flexDirection: 'row',
     justifyContent: 'space-between',
