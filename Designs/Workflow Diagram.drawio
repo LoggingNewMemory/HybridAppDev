@@ -1,14 +1,17 @@
 <mxfile host="Electron">
   <diagram name="Page-1" id="9m8uY7GPKLxmj7JX6QtG">
-    <mxGraphModel dx="673" dy="463" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1664" dy="1144" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="vkABUTXpRztZPwaVYtvB-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&lt;div&gt;10 Quotes for Login Page&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&quot;Pendidikan adalah senjata paling ampuh yang bisa kamu gunakan untuk mengubah dunia.&quot; – Nelson Mandela&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&quot;Hiduplah seolah engkau mati besok. Belajarlah seolah engkau hidup selamanya.&quot; – Mahatma Gandhi&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&quot;Pendidikan bukan sekadar mengisi wadah, tapi menyalakan api.&quot; – William Butler Yeats&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&quot;Tujuan pendidikan itu untuk mempertajam kecerdasan dan memperkukuh karakter.&quot; – Tan Malaka&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&quot;Satu anak, satu guru, satu buku, dan satu pena dapat mengubah dunia.&quot; – Malala Yousafzai&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&quot;Akar pendidikan itu pahit, tapi buahnya manis.&quot; – Aristoteles&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&quot;Pendidikan adalah tiket ke masa depan. Hari esok dimiliki oleh orang-orang yang mempersiapkannya sejak hari ini.&quot; – Malcolm X&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&quot;Anak-anak harus diajari bagaimana cara berpikir, bukan apa yang harus dipikirkan.&quot; – Margaret Mead&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&quot;Ing ngarso sung tulodo, ing madyo mangun karso, tut wuri handayani.&quot; – Ki Hajar Dewantara&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&quot;Pendidikan adalah kemampuan untuk mendengarkan hampir semua hal tanpa kehilangan ketenanganmu atau rasa percaya dirimu.&quot; – Robert Frost&lt;/div&gt;" vertex="1">
           <mxGeometry height="320" width="800" x="10" y="20" as="geometry" />
         </mxCell>
-        <mxCell id="vkABUTXpRztZPwaVYtvB-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="" vertex="1">
+        <mxCell id="vkABUTXpRztZPwaVYtvB-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="Note for Login Page:&lt;div&gt;- There&#39;s a simple Human Verifier&lt;/div&gt;&lt;div&gt;A simple drag to complete to prevent bot login&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;NOTE: This is not the best way possible. But this what I can do for now&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- Auth must handle race condition security check (1 per character checking or simply check after user submit Auth button)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- Verity you are human must pass, if not then can&#39;t auth&lt;/div&gt;" vertex="1">
           <mxGeometry height="540" width="370" x="830" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="vkABUTXpRztZPwaVYtvB-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;fontSize=20;" value="&lt;b&gt;NOTICE!!!!&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;FIREBASE IS STILL ON TEST MODE!&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;FIREBASE STORAGE IS STILL ONE TEST MODE!&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="190" width="500" x="1210" y="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
