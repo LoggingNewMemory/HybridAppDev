@@ -1,7 +1,11 @@
 import { useEffect, useRef, useState } from 'react';
-import { Animated, Dimensions, Image, KeyboardAvoidingView, Platform, SafeAreaView, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { Animated, Dimensions, Image, KeyboardAvoidingView, Platform, SafeAreaView, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View, useWindowDimensions } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import ZigZagCaptcha from '../components/ZigZagCaptcha';
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, sendPasswordResetEmail } from 'firebase/auth';
+import { auth } from '../firebaseConfig';
+import { useRouter } from 'expo-router';
+import Toast from '../components/Toast';
 
 const QUOTES = [
   { text: "Pendidikan adalah senjata paling ampuh yang bisa kamu gunakan untuk mengubah dunia.", author: "Nelson Mandela" },
@@ -16,13 +20,21 @@ const QUOTES = [
   { text: "Pendidikan adalah kemampuan untuk mendengarkan hampir semua hal tanpa kehilangan ketenanganmu atau rasa percaya dirimu.", author: "Robert Frost" }
 ];
 
-const { width } = Dimensions.get('window');
-
 export default function LoginScreen() {
+  const router = useRouter();
+  const { width } = useWindowDimensions();
+  const styles = getStyles(width);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
+  const [isHumanVerified, setIsHumanVerified] = useState(false);
   const [time, setTime] = useState(new Date());
+  
+  const [toast, setToast] = useState<{message: string, type: 'error' | 'success' | 'info'} | null>(null);
+
+  const showToast = (message: string, type: 'error' | 'success' | 'info' = 'error') => {
+    setToast({ message, type });
+  };
   
   const [quoteIndex, setQuoteIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState('');
@@ -79,18 +91,84 @@ export default function LoginScreen() {
   const hours = time.getHours().toString().padStart(2, '0');
   const minutes = time.getMinutes().toString().padStart(2, '0');
 
-  const handleLogin = () => {
-    // Handle login
-    console.log("Login with", email, password);
+  const handleLogin = async () => {
+    if (!isHumanVerified) {
+      showToast("Please verify you are human first.", 'error');
+      return;
+    }
+    if (!email || !password) {
+      showToast("Please enter both email and password.", 'error');
+      return;
+    }
+    
+    try {
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      console.log("Logged in with:", userCredential.user.email);
+      router.replace('/home');
+    } catch (error: any) {
+      if (error.code === 'auth/user-not-found' || error.code === 'auth/invalid-credential') {
+        try {
+          const newUserCredential = await createUserWithEmailAndPassword(auth, email, password);
+          console.log("Signed up with:", newUserCredential.user.email);
+          router.replace('/home');
+        } catch (signUpError: any) {
+          if (signUpError.code === 'auth/email-already-in-use') {
+            showToast("This email is already registered, likely with Google. Please sign in with Google, or click 'Forgot Password' to create a password for it.", 'info');
+          } else {
+            console.error("Sign up error:", signUpError);
+            showToast("Sign up failed: " + signUpError.message, 'error');
+          }
+        }
+      } else {
+        console.error("Login error:", error);
+        showToast("Login failed: " + error.message, 'error');
+      }
+    }
   };
 
-  const handleGoogleLogin = () => {
-    // Handle Google login
-    console.log("Google login");
+  const handleGoogleLogin = async () => {
+    if (Platform.OS === 'web') {
+      try {
+        const provider = new GoogleAuthProvider();
+        const result = await signInWithPopup(auth, provider);
+        console.log("Google logged in with:", result.user.email);
+        router.replace('/home');
+      } catch (error: any) {
+        if (error.code === 'auth/account-exists-with-different-credential' || error.code === 'auth/email-already-in-use') {
+          showToast("An account already exists with this email using a password. Please log in with Email & Password in the section below.", 'info');
+        } else if (error.code !== 'auth/popup-closed-by-user') {
+          console.error("Google login error:", error);
+          showToast("Google Login Failed: " + error.message, 'error');
+        }
+      }
+    } else {
+      showToast("Google login for mobile requires additional native setup.", 'error');
+    }
+  };
+
+  const handleForgotPassword = async () => {
+    if (!email) {
+      showToast("Please enter your email address in the Email field first to reset your password.", 'info');
+      return;
+    }
+    try {
+      await sendPasswordResetEmail(auth, email);
+      showToast("Password reset email sent! Check your inbox.", 'success');
+    } catch (error: any) {
+      console.error("Forgot password error:", error);
+      showToast("Error sending password reset: " + error.message, 'error');
+    }
   };
 
   return (
     <SafeAreaView style={styles.container}>
+      {toast && (
+        <Toast 
+          message={toast.message} 
+          type={toast.type} 
+          onHide={() => setToast(null)} 
+        />
+      )}
       <KeyboardAvoidingView 
         style={styles.keyboardView}
         behavior={Platform.OS === 'ios' ? 'padding' : undefined}
@@ -134,7 +212,10 @@ export default function LoginScreen() {
             {/* Right Column */}
             <View style={styles.rightColumn}>
               <View style={styles.googleBtnWrapper}>
-                <TouchableOpacity style={styles.googleButton} onPress={handleGoogleLogin}>
+                <TouchableOpacity 
+                  style={styles.googleButton} 
+                  onPress={handleGoogleLogin}
+                >
                   <Text style={styles.googleButtonText}>Sign-up or Sign-in With Google</Text>
                   <View style={styles.googleIconContainer}>
                     <Image source={require('../../assets/images/Google.webp')} style={styles.googleIcon} resizeMode="contain" />
@@ -179,10 +260,17 @@ export default function LoginScreen() {
                   secureTextEntry={!showPassword}
                 />
 
-                <View style={styles.bottomCardSection}>
-                  <ZigZagCaptcha onVerify={(token) => console.log('Verified:', token)} />
+                <TouchableOpacity onPress={handleForgotPassword} style={styles.forgotPasswordBtn}>
+                  <Text style={styles.forgotPasswordText}>Forgot Password?</Text>
+                </TouchableOpacity>
 
-                  <TouchableOpacity style={styles.authButton} onPress={handleLogin}>
+                <View style={styles.bottomCardSection}>
+                  <ZigZagCaptcha onVerify={(success) => setIsHumanVerified(success)} />
+
+                  <TouchableOpacity 
+                    style={[styles.authButton, !isHumanVerified && { opacity: 0.5 }]} 
+                    onPress={handleLogin}
+                  >
                     <Text style={styles.authButtonText}>Authenticate</Text>
                   </TouchableOpacity>
                 </View>
@@ -196,7 +284,7 @@ export default function LoginScreen() {
   );
 }
 
-const styles = StyleSheet.create({
+const getStyles = (width: number) => StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#E6E4FA', // Very light purple
@@ -402,6 +490,17 @@ const styles = StyleSheet.create({
   eyeIcon: {
     color: '#FFF',
     marginBottom: 8,
+  },
+  forgotPasswordBtn: {
+    alignSelf: 'flex-end',
+    marginBottom: 20,
+    marginTop: -20,
+  },
+  forgotPasswordText: {
+    color: '#FFF',
+    fontFamily: 'Gilmer-Regular',
+    fontSize: 14,
+    textDecorationLine: 'underline',
   },
   bottomCardSection: {
     flexDirection: 'row',
