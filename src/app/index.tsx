@@ -29,6 +29,7 @@ export default function LoginScreen() {
   const [showPassword, setShowPassword] = useState(false);
   const [isHumanVerified, setIsHumanVerified] = useState(false);
   const [time, setTime] = useState(new Date());
+  const [isLoading, setIsLoading] = useState(false);
   
   const [toast, setToast] = useState<{message: string, type: 'error' | 'success' | 'info'} | null>(null);
 
@@ -101,6 +102,7 @@ export default function LoginScreen() {
       return;
     }
     
+    setIsLoading(true);
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       console.log("Logged in with:", userCredential.user.email);
@@ -113,7 +115,7 @@ export default function LoginScreen() {
           router.replace('/home');
         } catch (signUpError: any) {
           if (signUpError.code === 'auth/email-already-in-use') {
-            showToast("This email is already registered, likely with Google. Please sign in with Google, or click 'Forgot Password' to create a password for it.", 'info');
+            showToast("Invalid credentials or email already in use. Please check your password or try signing in with Google.", 'info');
           } else {
             console.error("Sign up error:", signUpError);
             showToast("Sign up failed: " + signUpError.message, 'error');
@@ -123,11 +125,14 @@ export default function LoginScreen() {
         console.error("Login error:", error);
         showToast("Login failed: " + error.message, 'error');
       }
+    } finally {
+      setIsLoading(false);
     }
   };
 
   const handleGoogleLogin = async () => {
     if (Platform.OS === 'web') {
+      setIsLoading(true);
       try {
         const provider = new GoogleAuthProvider();
         const result = await signInWithPopup(auth, provider);
@@ -140,6 +145,8 @@ export default function LoginScreen() {
           console.error("Google login error:", error);
           showToast("Google Login Failed: " + error.message, 'error');
         }
+      } finally {
+        setIsLoading(false);
       }
     } else {
       showToast("Google login for mobile requires additional native setup.", 'error');
@@ -151,12 +158,16 @@ export default function LoginScreen() {
       showToast("Please enter your email address in the Email field first to reset your password.", 'info');
       return;
     }
+    
+    setIsLoading(true);
     try {
       await sendPasswordResetEmail(auth, email);
       showToast("Password reset email sent! Check your inbox.", 'success');
     } catch (error: any) {
       console.error("Forgot password error:", error);
       showToast("Error sending password reset: " + error.message, 'error');
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -213,10 +224,13 @@ export default function LoginScreen() {
             <View style={styles.rightColumn}>
               <View style={styles.googleBtnWrapper}>
                 <TouchableOpacity 
-                  style={styles.googleButton} 
+                  style={[styles.googleButton, isLoading && { opacity: 0.5 }]} 
                   onPress={handleGoogleLogin}
+                  disabled={isLoading}
                 >
-                  <Text style={styles.googleButtonText}>Sign-up or Sign-in With Google</Text>
+                  <Text style={styles.googleButtonText}>
+                    {isLoading ? 'Authenticating...' : 'Sign-up or Sign-in With Google'}
+                  </Text>
                   <View style={styles.googleIconContainer}>
                     <Image source={require('../../assets/images/Google.webp')} style={styles.googleIcon} resizeMode="contain" />
                   </View>
@@ -268,10 +282,13 @@ export default function LoginScreen() {
                   <ZigZagCaptcha onVerify={(success) => setIsHumanVerified(success)} />
 
                   <TouchableOpacity 
-                    style={[styles.authButton, !isHumanVerified && { opacity: 0.5 }]} 
+                    style={[styles.authButton, (!isHumanVerified || isLoading) && { opacity: 0.5 }]} 
                     onPress={handleLogin}
+                    disabled={!isHumanVerified || isLoading}
                   >
-                    <Text style={styles.authButtonText}>Authenticate</Text>
+                    <Text style={styles.authButtonText}>
+                      {isLoading ? 'Authenticating...' : 'Authenticate'}
+                    </Text>
                   </TouchableOpacity>
                 </View>
               </View>
