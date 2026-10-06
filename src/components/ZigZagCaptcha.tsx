@@ -110,6 +110,7 @@ export default function ZigZagCaptcha({ onVerify }: { onVerify: (success: boolea
 
   const panResponder = useRef(
     PanResponder.create({
+      onStartShouldSetPanResponder: () => !isVerifiedRef.current,
       onMoveShouldSetPanResponder: () => !isVerifiedRef.current,
       onPanResponderGrant: () => {
         isAnimatingRef.current = false;
@@ -161,21 +162,23 @@ export default function ZigZagCaptcha({ onVerify }: { onVerify: (success: boolea
         }}
         disabled={verified || failed}
       >
-        <View style={[
-          styles.checkbox, 
-          verified && styles.checkboxVerified,
-          failed && styles.checkboxFailed
-        ]}>
-          {verified && <Text style={styles.checkmark}>✓</Text>}
-          {failed && <Text style={styles.crossmark}>✕</Text>}
+        <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+          <View style={[
+            styles.checkbox, 
+            verified && styles.checkboxVerified,
+            failed && styles.checkboxFailed
+          ]}>
+            {verified && <Text style={styles.checkmark}>✓</Text>}
+            {failed && <Text style={styles.crossmark}>✕</Text>}
+          </View>
+          <Text style={[
+            styles.mainButtonText, 
+            verified && styles.mainButtonTextVerified,
+            failed && styles.mainButtonTextFailed
+          ]}>
+            {verified ? 'Verified Human' : failed ? 'Clanker Detected. Get Out' : 'Verify you are human'}
+          </Text>
         </View>
-        <Text style={[
-          styles.mainButtonText, 
-          verified && styles.mainButtonTextVerified,
-          failed && styles.mainButtonTextFailed
-        ]}>
-          {verified ? 'Verified Human' : failed ? 'Clanker Detected. Get Out' : 'Verify you are human'}
-        </Text>
       </TouchableOpacity>
 
       <Modal visible={modalVisible} transparent animationType="fade">
@@ -235,23 +238,26 @@ export default function ZigZagCaptcha({ onVerify }: { onVerify: (success: boolea
 
 const styles = StyleSheet.create({
   wrapper: {
-    alignItems: 'flex-start',
+    width: '100%',
+    alignItems: 'stretch',
+    marginBottom: 8,
   },
   mainButton: {
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'space-between',
     backgroundColor: '#FFF',
-    paddingVertical: 12,
+    paddingVertical: 14,
     paddingHorizontal: 16,
-    borderRadius: 8,
+    borderRadius: 12,
     borderWidth: 1,
-    borderColor: '#D4D4D4',
-    minWidth: 220,
+    borderColor: '#F1F5F9',
+    width: '100%',
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 4,
-    elevation: 2,
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.05,
+    shadowRadius: 2,
+    elevation: 1,
   },
   mainButtonVerified: {
     borderColor: '#4DD0E1',

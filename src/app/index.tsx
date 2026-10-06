@@ -270,17 +270,23 @@ export default function LoginScreen() {
                   <Text className="text-white text-[14px] underline" style={{ fontFamily: 'Gilmer-Regular' }}>Forgot Password?</Text>
                 </TouchableOpacity>
 
-                <View className="flex-row justify-between items-center mt-5 flex-wrap gap-4">
-                  <ZigZagCaptcha onVerify={(success) => setIsHumanVerified(success)} />
+                <View className={`mt-5 w-full ${!isMd ? 'flex-col gap-3' : 'flex-row justify-between items-center flex-wrap gap-4'}`}>
+                  <View className={!isMd ? 'w-full' : ''}>
+                    <ZigZagCaptcha onVerify={(success) => setIsHumanVerified(success)} />
+                  </View>
 
                   <TouchableOpacity 
-                    className={`bg-[#4DD0E1] py-[14px] px-7 rounded-[30px] border-[2px] border-white ${(!isHumanVerified || isLoading) ? 'opacity-50' : ''}`}
+                    className={`bg-[#41CDDC] flex-row items-center justify-center py-4 px-6 rounded-xl ${!isMd ? 'w-full' : 'min-w-[200px]'} ${(!isHumanVerified || isLoading) ? 'opacity-50' : ''}`}
+                    style={{ shadowColor: "#000", shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.15, shadowRadius: 3, elevation: 3 }}
                     onPress={handleLogin}
                     disabled={!isHumanVerified || isLoading}
                   >
-                    <Text className={`text-white ${isMd ? 'text-[18px]' : 'text-[15px]'}`} style={{ fontFamily: 'GoogleSansFlex-36pt-Regular' }}>
+                    <Text className={`text-white font-bold tracking-wide ${isMd ? 'text-[18px]' : 'text-[16px]'}`} style={{ fontFamily: 'GoogleSansFlex-36pt-Regular' }}>
                       {isLoading ? 'Authenticating...' : 'Authenticate'}
                     </Text>
+                    {!isLoading && (
+                      <Ionicons name="arrow-forward" size={18} color="#FFF" style={{ marginLeft: 8, marginTop: 2 }} />
+                    )}
                   </TouchableOpacity>
                 </View>
               </View>
