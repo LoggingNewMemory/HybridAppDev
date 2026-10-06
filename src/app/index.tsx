@@ -6,6 +6,7 @@ import { signInWithEmailAndPassword, createUserWithEmailAndPassword, GoogleAuthP
 import { auth } from '../firebaseConfig';
 import { useRouter } from 'expo-router';
 import Toast from '../components/Toast';
+import { LinearGradient } from 'expo-linear-gradient';
 
 const QUOTES = [
   { text: "Pendidikan adalah senjata paling ampuh yang bisa kamu gunakan untuk mengubah dunia.", author: "Nelson Mandela" },
@@ -172,7 +173,8 @@ export default function LoginScreen() {
   };
 
   return (
-    <SafeAreaView className="flex-1 bg-[#E6E4FA]">
+    <LinearGradient colors={['rgba(148, 127, 245, 0.15)', '#FFFFFF']} start={{ x: 1, y: 0 }} end={{ x: 0, y: 1 }} style={{ flex: 1 }}>
+      <SafeAreaView className="flex-1">
       {toast && (
         <Toast 
           message={toast.message} 
@@ -312,6 +314,7 @@ export default function LoginScreen() {
           </View>
         </ScrollView>
       </KeyboardAvoidingView>
-    </SafeAreaView>
+      </SafeAreaView>
+    </LinearGradient>
   );
 }
