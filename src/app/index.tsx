@@ -22,7 +22,7 @@ const QUOTES = [
 
 export default function LoginScreen() {
   const router = useRouter();
-  const { width } = useWindowDimensions();
+  const { width, height } = useWindowDimensions();
   const isMd = width > 768;
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -185,33 +185,35 @@ export default function LoginScreen() {
         behavior={Platform.OS === 'ios' ? 'padding' : undefined}
       >
         <ScrollView 
+          className="flex-1"
           contentContainerClassName="grow justify-center"
           contentContainerStyle={{ 
             paddingHorizontal: isMd ? '8%' : 20, 
-            paddingVertical: isMd ? 60 : 20 
+            paddingVertical: isMd ? 60 : 20,
+            minHeight: Platform.OS === 'web' ? height : '100%'
           }}
         >
           <View 
-            className={`justify-between flex-1 w-full self-center ${isMd ? 'flex-row' : 'flex-col'}`}
-            style={{ maxWidth: 1600 }}
+            className={`w-full self-center relative ${isMd ? 'flex-row items-center justify-between' : 'flex-col justify-center'}`}
+            style={{ maxWidth: 1600, flex: 1 }}
           >
             
+            {/* Logo */}
+            <View className={`flex-row items-center z-10 ${isMd ? 'absolute top-0 left-0' : 'mb-10 self-start'}`}>
+              <Image source={require('../../assets/images/AChanLogo.webp')} style={{ width: 80, height: 80, borderRadius: 40, marginRight: 16 }} resizeMode="contain" />
+              <View className="justify-center">
+                <Text className="text-[32px] text-black mb-1" style={{ fontFamily: 'GoogleSansFlex-36pt-Regular' }}>A-Chan</Text>
+                <View className="h-[2px] bg-black w-full mb-1" />
+                <Text className="text-[16px] text-black" style={{ fontFamily: 'GoogleSansFlex-36pt-Regular' }}>All In One Education Platform</Text>
+              </View>
+            </View>
+
             {/* Left Column */}
             <View 
-              className="flex-1 justify-between" 
-              style={{ minHeight: isMd ? '100%' : 400, paddingRight: isMd ? '5%' : 0 }}
+              className="flex-1 justify-center" 
+              style={{ paddingRight: isMd ? '5%' : 0 }}
             >
-              <View className="flex-row items-center mb-10">
-                <Image source={require('../../assets/images/AChanLogo.webp')} style={{ width: 80, height: 80, borderRadius: 40, marginRight: 16 }} resizeMode="contain" />
-                <View className="justify-center">
-                  <Text className="text-[32px] text-black mb-1" style={{ fontFamily: 'GoogleSansFlex-36pt-Regular' }}>A-Chan</Text>
-                  <View className="h-[2px] bg-black w-full mb-1" />
-                  <Text className="text-[16px] text-black" style={{ fontFamily: 'GoogleSansFlex-36pt-Regular' }}>All In One Education Platform</Text>
-                </View>
-              </View>
-
-              <View className="justify-center flex-1">
-                <View className="flex-row items-baseline">
+              <View className="flex-row items-baseline">
                   <Text className="text-[90px] text-[#FF0000]" style={{ fontFamily: 'GoogleSansFlex-9pt-Medium' }}>{hours[0]}</Text>
                   <Text className="text-[90px] text-black" style={{ fontFamily: 'GoogleSansFlex-9pt-Medium' }}>{hours[1]}</Text>
                   <Text className="text-[90px] text-black" style={{ fontFamily: 'GoogleSansFlex-9pt-Medium' }}>:</Text>
@@ -229,12 +231,11 @@ export default function LoginScreen() {
                     <Text className="text-[16px] text-[#666]" style={{ fontFamily: 'Gilmer-Regular' }}>~ {QUOTES[quoteIndex].author}</Text>
                   </Animated.View>
                 </View>
-              </View>
             </View>
 
             {/* Right Column */}
-            <View className={`justify-center ${isMd ? 'items-end mt-0' : 'items-stretch mt-10'}`} style={{ flex: 1.4 }}>
-              <View className="w-full items-end mb-10" style={{ maxWidth: 650 }}>
+            <View className={`justify-center ${isMd ? 'items-end mt-0' : 'items-stretch mt-10'}`} style={{ flex: 1.1 }}>
+              <View className="w-full items-end mb-4" style={{ maxWidth: 650 }}>
                 <TouchableOpacity 
                   className={`flex-row items-center bg-[#9FBFFC] rounded-[30px] py-3 px-5 ${isLoading ? 'opacity-50' : ''}`}
                   onPress={handleGoogleLogin}
@@ -249,7 +250,7 @@ export default function LoginScreen() {
                 </TouchableOpacity>
               </View>
 
-              <View className="w-full bg-[#907CFF] rounded-[24px] p-10" style={{ maxWidth: 650 }}>
+              <View className="w-full bg-[#907CFF] rounded-[24px] p-8 md:p-10" style={{ maxWidth: 650 }}>
                 <View className="flex-row justify-between items-center mb-10">
                   <Text className="text-white text-[24px]" style={{ fontFamily: 'GoogleSansFlex-36pt-Regular' }}>Or With Email</Text>
                   <View className="flex-row gap-1.5">
@@ -296,7 +297,7 @@ export default function LoginScreen() {
                   <ZigZagCaptcha onVerify={(success) => setIsHumanVerified(success)} />
 
                   <TouchableOpacity 
-                    className={`bg-[#4DD0E1] py-[14px] px-7 rounded-[30px] ${(!isHumanVerified || isLoading) ? 'opacity-50' : ''}`}
+                    className={`bg-[#4DD0E1] py-[14px] px-7 rounded-[30px] border-[2px] border-white ${(!isHumanVerified || isLoading) ? 'opacity-50' : ''}`}
                     onPress={handleLogin}
                     disabled={!isHumanVerified || isLoading}
                   >
