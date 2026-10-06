@@ -196,54 +196,29 @@ export default function LoginScreen() {
           }}
         >
           <View 
-            className={`w-full self-center relative ${isMd ? 'flex-row items-center justify-between' : 'flex-col justify-center'}`}
+            className={`w-full self-center relative ${isMd ? 'flex-row-reverse items-center justify-between' : 'flex-col justify-center'}`}
             style={{ maxWidth: 1600, flex: 1 }}
           >
             
             {/* Logo */}
-            <View className={`flex-row items-center z-10 ${isMd ? 'absolute top-0 left-0' : 'mb-10 self-start'}`}>
-              <Image source={require('../../assets/images/AChanLogo.webp')} style={{ width: 80, height: 80, borderRadius: 40, marginRight: 16 }} resizeMode="contain" />
+            <View className={`flex-row items-center z-10 ${isMd ? 'absolute top-0 left-0' : 'mb-6 self-start'}`}>
+              <Image source={require('../../assets/images/AChanLogo.webp')} style={{ width: isMd ? 80 : 50, height: isMd ? 80 : 50, borderRadius: isMd ? 40 : 25, marginRight: 16 }} resizeMode="contain" />
               <View className="justify-center">
-                <Text className="text-[32px] text-black mb-1" style={{ fontFamily: 'GoogleSansFlex-36pt-Regular' }}>A-Chan</Text>
+                <Text className={`text-black mb-1 ${isMd ? 'text-[32px]' : 'text-[24px]'}`} style={{ fontFamily: 'GoogleSansFlex-36pt-Regular' }}>A-Chan</Text>
                 <View className="h-[2px] bg-black w-full mb-1" />
-                <Text className="text-[16px] text-black" style={{ fontFamily: 'GoogleSansFlex-36pt-Regular' }}>All In One Education Platform</Text>
+                <Text className={`text-black ${isMd ? 'text-[16px]' : 'text-[12px]'}`} style={{ fontFamily: 'GoogleSansFlex-36pt-Regular' }}>All In One Education Platform</Text>
               </View>
             </View>
 
-            {/* Left Column */}
-            <View 
-              className="flex-1 justify-center" 
-              style={{ paddingRight: isMd ? '5%' : 0 }}
-            >
-              <View className="flex-row items-baseline">
-                  <Text className="text-[90px] text-[#FF0000]" style={{ fontFamily: 'GoogleSansFlex-9pt-Medium' }}>{hours[0]}</Text>
-                  <Text className="text-[90px] text-black" style={{ fontFamily: 'GoogleSansFlex-9pt-Medium' }}>{hours[1]}</Text>
-                  <Text className="text-[90px] text-black" style={{ fontFamily: 'GoogleSansFlex-9pt-Medium' }}>:</Text>
-                  <Text className="text-[90px] text-[#9978FF]" style={{ fontFamily: 'GoogleSansFlex-9pt-Medium' }}>{minutes[0]}</Text>
-                  <Text className="text-[90px] text-black" style={{ fontFamily: 'GoogleSansFlex-9pt-Medium' }}>{minutes[1]}</Text>
-                </View>
-                <View className="flex-row items-center mt-[5px]" style={{ width: 250 }}>
-                  <View className="h-[3px] bg-[#9580FF] flex-1" />
-                  <View className="w-[15px] h-[15px] border-t-[3px] border-r-[3px] border-[#9580FF] -ml-[3px]" style={{ transform: [{ rotate: '45deg' }] }} />
-                </View>
-                
-                <View className="mt-[30px]" style={{ maxWidth: 450, height: 150 }}>
-                  <Text className="text-[18px] text-black leading-[26px] mb-[10px]" style={{ fontFamily: 'Gilmer-Regular' }}>{displayedText}</Text>
-                  <Animated.View style={{ opacity: fadeAnim }}>
-                    <Text className="text-[16px] text-[#666]" style={{ fontFamily: 'Gilmer-Regular' }}>~ {QUOTES[quoteIndex].author}</Text>
-                  </Animated.View>
-                </View>
-            </View>
-
             {/* Right Column */}
-            <View className={`justify-center ${isMd ? 'items-end mt-0' : 'items-stretch mt-10'}`} style={{ flex: 1.1 }}>
+            <View className={`justify-center ${isMd ? 'items-end mt-0' : 'items-stretch w-full'}`} style={{ flex: 1.1 }}>
               <View className="w-full items-end mb-4" style={{ maxWidth: 650 }}>
                 <TouchableOpacity 
                   className={`flex-row items-center bg-[#9FBFFC] rounded-[30px] py-3 px-5 ${isLoading ? 'opacity-50' : ''}`}
                   onPress={handleGoogleLogin}
                   disabled={isLoading}
                 >
-                  <Text className="text-white text-[18px] mr-4" style={{ fontFamily: 'GoogleSansFlex-36pt-Regular' }}>
+                  <Text className={`text-white mr-4 ${isMd ? 'text-[18px]' : 'text-[15px]'}`} style={{ fontFamily: 'GoogleSansFlex-36pt-Regular' }}>
                     {isLoading ? 'Authenticating...' : 'Sign-up or Sign-in With Google'}
                   </Text>
                   <View className="bg-[#357AE8] rounded-[20px] justify-center items-center" style={{ width: 40, height: 40 }}>
@@ -252,9 +227,9 @@ export default function LoginScreen() {
                 </TouchableOpacity>
               </View>
 
-              <View className="w-full bg-[#907CFF] rounded-[24px] p-8 md:p-10" style={{ maxWidth: 650 }}>
+              <View className="w-full bg-[#907CFF] rounded-[24px] p-6 md:p-10" style={{ maxWidth: 650 }}>
                 <View className="flex-row justify-between items-center mb-10">
-                  <Text className="text-white text-[24px]" style={{ fontFamily: 'GoogleSansFlex-36pt-Regular' }}>Or With Email</Text>
+                  <Text className={`text-white ${isMd ? 'text-[24px]' : 'text-[20px]'}`} style={{ fontFamily: 'GoogleSansFlex-36pt-Regular' }}>Or With Email</Text>
                   <View className="flex-row gap-1.5">
                     <View className="w-[5px] h-[30px] bg-white rounded-[3px]" />
                     <View className="w-[5px] h-[30px] bg-white rounded-[3px]" />
@@ -262,9 +237,9 @@ export default function LoginScreen() {
                   </View>
                 </View>
 
-                <Text className="text-white text-[18px] mb-2" style={{ fontFamily: 'GoogleSansFlex-36pt-Regular' }}>Email</Text>
+                <Text className={`text-white mb-2 ${isMd ? 'text-[18px]' : 'text-[15px]'}`} style={{ fontFamily: 'GoogleSansFlex-36pt-Regular' }}>Email</Text>
                 <TextInput
-                  className="border-b-[1px] border-white text-white text-[18px] pt-3 pb-1 mb-8"
+                  className={`border-b-[1px] border-white text-white pt-3 pb-1 mb-8 ${isMd ? 'text-[18px]' : 'text-[15px]'}`}
                   style={[{ fontFamily: 'GoogleSansFlex-36pt-Regular' }, Platform.OS === 'web' && { outlineStyle: 'none' }] as any}
                   value={email}
                   onChangeText={setEmail}
@@ -273,7 +248,7 @@ export default function LoginScreen() {
                 />
 
                 <View className="flex-row justify-between items-end">
-                  <Text className="text-white text-[18px] mb-2" style={{ fontFamily: 'GoogleSansFlex-36pt-Regular' }}>Password</Text>
+                  <Text className={`text-white mb-2 ${isMd ? 'text-[18px]' : 'text-[15px]'}`} style={{ fontFamily: 'GoogleSansFlex-36pt-Regular' }}>Password</Text>
                   <TouchableOpacity onPress={() => setShowPassword(!showPassword)}>
                     <Ionicons 
                       name={showPassword ? "eye-outline" : "eye-off-outline"} 
@@ -284,7 +259,7 @@ export default function LoginScreen() {
                   </TouchableOpacity>
                 </View>
                 <TextInput
-                  className="border-b-[1px] border-white text-white text-[18px] pt-3 pb-1 mb-8"
+                  className={`border-b-[1px] border-white text-white pt-3 pb-1 mb-8 ${isMd ? 'text-[18px]' : 'text-[15px]'}`}
                   style={[{ fontFamily: 'GoogleSansFlex-36pt-Regular' }, Platform.OS === 'web' && { outlineStyle: 'none' }] as any}
                   value={password}
                   onChangeText={setPassword}
@@ -303,7 +278,7 @@ export default function LoginScreen() {
                     onPress={handleLogin}
                     disabled={!isHumanVerified || isLoading}
                   >
-                    <Text className="text-white text-[18px]" style={{ fontFamily: 'GoogleSansFlex-36pt-Regular' }}>
+                    <Text className={`text-white ${isMd ? 'text-[18px]' : 'text-[15px]'}`} style={{ fontFamily: 'GoogleSansFlex-36pt-Regular' }}>
                       {isLoading ? 'Authenticating...' : 'Authenticate'}
                     </Text>
                   </TouchableOpacity>
@@ -311,7 +286,34 @@ export default function LoginScreen() {
               </View>
             </View>
 
-          </View>
+          {/* Left Column */}
+            <View 
+              className={`flex-1 justify-center ${!isMd ? 'bg-white/40 rounded-2xl p-5 border-[1px] border-white/60 mt-8' : ''}`} 
+              style={isMd ? { paddingRight: '5%' } : {}}
+            >
+              <View className={isMd ? 'flex-col' : 'flex-row items-center mb-2'}>
+                <View className="flex-row items-baseline">
+                    <Text className={`text-[#FF0000] ${isMd ? 'text-[90px]' : 'text-[36px]'}`} style={{ fontFamily: 'GoogleSansFlex-9pt-Medium' }}>{hours[0]}</Text>
+                    <Text className={`text-black ${isMd ? 'text-[90px]' : 'text-[36px]'}`} style={{ fontFamily: 'GoogleSansFlex-9pt-Medium' }}>{hours[1]}</Text>
+                    <Text className={`text-black ${isMd ? 'text-[90px]' : 'text-[36px]'}`} style={{ fontFamily: 'GoogleSansFlex-9pt-Medium' }}>:</Text>
+                    <Text className={`text-[#9978FF] ${isMd ? 'text-[90px]' : 'text-[36px]'}`} style={{ fontFamily: 'GoogleSansFlex-9pt-Medium' }}>{minutes[0]}</Text>
+                    <Text className={`text-black ${isMd ? 'text-[90px]' : 'text-[36px]'}`} style={{ fontFamily: 'GoogleSansFlex-9pt-Medium' }}>{minutes[1]}</Text>
+                </View>
+                <View className={`flex-row items-center ${isMd ? 'mt-[5px]' : 'ml-4 flex-1'}`} style={isMd ? { width: 250 } : {}}>
+                    <View className="h-[3px] bg-[#9580FF] flex-1" />
+                    <View className="w-[15px] h-[15px] border-t-[3px] border-r-[3px] border-[#9580FF] -ml-[3px] mr-1" style={{ transform: [{ rotate: '45deg' }] }} />
+                </View>
+              </View>
+                
+                <View className={isMd ? 'mt-[30px]' : 'mt-2'} style={{ maxWidth: 450, height: isMd ? 150 : 100 }}>
+                  <Text className={`text-black ${isMd ? 'text-[18px] leading-[26px] mb-[10px]' : 'text-[13px] leading-[20px]'}`} style={{ fontFamily: 'Gilmer-Regular' }}>{displayedText}</Text>
+                  <Animated.View style={{ opacity: fadeAnim }}>
+                    <Text className={`text-[#666] ${isMd ? 'text-[16px]' : 'text-[12px] font-semibold mt-1'}`} style={{ fontFamily: 'Gilmer-Regular' }}>~ {QUOTES[quoteIndex].author}</Text>
+                  </Animated.View>
+                </View>
+            </View>
+
+            </View>
         </ScrollView>
       </KeyboardAvoidingView>
       </SafeAreaView>
