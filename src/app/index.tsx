@@ -229,7 +229,7 @@ export default function LoginScreen() {
                 </View>
               </View>
                 
-                <View className={isMd ? 'mt-[30px]' : 'mt-1'} style={{ maxWidth: 450, minHeight: isMd ? 150 : 60 }}>
+                <View className={isMd ? 'mt-[30px]' : 'mt-1'} style={{ maxWidth: 450, height: isMd ? 150 : 75 }}>
                   <Text className={`text-black ${isMd ? 'text-[18px] leading-[26px] mb-[10px]' : 'text-[13px] leading-[18px]'}`} style={{ fontFamily: 'Gilmer-Regular' }}>{displayedText}</Text>
                   <Animated.View style={{ opacity: fadeAnim }}>
                     <Text className={`text-[#666] ${isMd ? 'text-[16px]' : 'text-[11px] font-semibold mt-0.5'}`} style={{ fontFamily: 'Gilmer-Regular' }}>~ {QUOTES[quoteIndex].author}</Text>
