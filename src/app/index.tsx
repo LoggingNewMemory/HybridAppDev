@@ -212,17 +212,17 @@ export default function LoginScreen() {
 
             {/* Right Column */}
             <View className={`justify-center ${isMd ? 'items-end mt-0' : 'items-stretch w-full'}`} style={{ flex: 1.1 }}>
-              <View className="w-full items-end mb-4" style={{ maxWidth: 650 }}>
+              <View className={`w-full mb-4 ${isMd ? 'items-end' : ''}`} style={{ maxWidth: 650 }}>
                 <TouchableOpacity 
-                  className={`flex-row items-center bg-[#9FBFFC] rounded-[30px] py-3 px-5 ${isLoading ? 'opacity-50' : ''}`}
+                  className={`flex-row items-center bg-[#7D93FF] rounded-2xl py-3 px-4 ${!isMd ? 'w-full justify-between' : 'justify-between min-w-[320px]'} ${isLoading ? 'opacity-50' : ''}`}
                   onPress={handleGoogleLogin}
                   disabled={isLoading}
                 >
-                  <Text className={`text-white mr-4 ${isMd ? 'text-[18px]' : 'text-[15px]'}`} style={{ fontFamily: 'GoogleSansFlex-36pt-Regular' }}>
+                  <Text className={`text-white pl-1 tracking-wide ${isMd ? 'text-[18px]' : 'text-[15px]'}`} style={{ fontFamily: 'GoogleSansFlex-36pt-Regular' }}>
                     {isLoading ? 'Authenticating...' : 'Sign-up or Sign-in With Google'}
                   </Text>
-                  <View className="bg-[#357AE8] rounded-[20px] justify-center items-center" style={{ width: 40, height: 40 }}>
-                    <Image source={require('../../assets/images/Google.webp')} style={{ width: 24, height: 24 }} resizeMode="contain" />
+                  <View className="bg-white rounded-full justify-center items-center ml-2" style={{ width: 32, height: 32 }}>
+                    <Image source={require('../../assets/images/Google.webp')} style={{ width: 18, height: 18 }} resizeMode="contain" />
                   </View>
                 </TouchableOpacity>
               </View>
