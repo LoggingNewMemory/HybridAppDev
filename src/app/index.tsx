@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Animated, Dimensions, Image, KeyboardAvoidingView, Platform, SafeAreaView, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View, useWindowDimensions } from 'react-native';
+import { Animated, Image, KeyboardAvoidingView, Platform, SafeAreaView, ScrollView, Text, TextInput, TouchableOpacity, View, useWindowDimensions } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import ZigZagCaptcha from '../components/ZigZagCaptcha';
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, sendPasswordResetEmail } from 'firebase/auth';
@@ -23,7 +23,7 @@ const QUOTES = [
 export default function LoginScreen() {
   const router = useRouter();
   const { width } = useWindowDimensions();
-  const styles = getStyles(width);
+  const isMd = width > 768;
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -39,7 +39,7 @@ export default function LoginScreen() {
   
   const [quoteIndex, setQuoteIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState('');
-  const fadeAnim = useRef(new Animated.Value(0)).current; // Start hidden
+  const fadeAnim = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
     const quoteInterval = setInterval(() => {
@@ -50,7 +50,7 @@ export default function LoginScreen() {
       }).start(() => {
         setQuoteIndex((prev) => (prev + 1) % QUOTES.length);
       });
-    }, 10000); // 10 seconds
+    }, 10000);
 
     return () => clearInterval(quoteInterval);
   }, [fadeAnim]);
@@ -172,7 +172,7 @@ export default function LoginScreen() {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView className="flex-1 bg-[#E6E4FA]">
       {toast && (
         <Toast 
           message={toast.message} 
@@ -181,112 +181,126 @@ export default function LoginScreen() {
         />
       )}
       <KeyboardAvoidingView 
-        style={styles.keyboardView}
+        className="flex-1"
         behavior={Platform.OS === 'ios' ? 'padding' : undefined}
       >
-        <ScrollView contentContainerStyle={styles.scrollContent}>
-          <View style={styles.mainLayout}>
+        <ScrollView 
+          contentContainerClassName="grow justify-center"
+          contentContainerStyle={{ 
+            paddingHorizontal: isMd ? '8%' : 20, 
+            paddingVertical: isMd ? 60 : 20 
+          }}
+        >
+          <View 
+            className={`justify-between flex-1 w-full self-center ${isMd ? 'flex-row' : 'flex-col'}`}
+            style={{ maxWidth: 1600 }}
+          >
             
             {/* Left Column */}
-            <View style={styles.leftColumn}>
-              <View style={styles.logoContainer}>
-                <Image source={require('../../assets/images/AChanLogo.webp')} style={styles.logo} resizeMode="contain" />
-                <View style={styles.logoTextContainer}>
-                  <Text style={styles.brandName}>A-Chan</Text>
-                  <View style={styles.divider} />
-                  <Text style={styles.tagline}>All In One Education Platform</Text>
+            <View 
+              className="flex-1 justify-between" 
+              style={{ minHeight: isMd ? '100%' : 400, paddingRight: isMd ? '5%' : 0 }}
+            >
+              <View className="flex-row items-center mb-10">
+                <Image source={require('../../assets/images/AChanLogo.webp')} style={{ width: 80, height: 80, borderRadius: 40, marginRight: 16 }} resizeMode="contain" />
+                <View className="justify-center">
+                  <Text className="text-[32px] text-black mb-1" style={{ fontFamily: 'GoogleSansFlex-36pt-Regular' }}>A-Chan</Text>
+                  <View className="h-[2px] bg-black w-full mb-1" />
+                  <Text className="text-[16px] text-black" style={{ fontFamily: 'GoogleSansFlex-36pt-Regular' }}>All In One Education Platform</Text>
                 </View>
               </View>
 
-              <View style={styles.clockSection}>
-                <View style={styles.clockContainer}>
-                  <Text style={[styles.clockDigit, styles.clockRed]}>{hours[0]}</Text>
-                  <Text style={styles.clockDigit}>{hours[1]}</Text>
-                  <Text style={styles.clockDigit}>:</Text>
-                  <Text style={[styles.clockDigit, styles.clockPurple]}>{minutes[0]}</Text>
-                  <Text style={styles.clockDigit}>{minutes[1]}</Text>
+              <View className="justify-center flex-1">
+                <View className="flex-row items-baseline">
+                  <Text className="text-[90px] text-[#FF0000]" style={{ fontFamily: 'GoogleSansFlex-9pt-Medium' }}>{hours[0]}</Text>
+                  <Text className="text-[90px] text-black" style={{ fontFamily: 'GoogleSansFlex-9pt-Medium' }}>{hours[1]}</Text>
+                  <Text className="text-[90px] text-black" style={{ fontFamily: 'GoogleSansFlex-9pt-Medium' }}>:</Text>
+                  <Text className="text-[90px] text-[#9978FF]" style={{ fontFamily: 'GoogleSansFlex-9pt-Medium' }}>{minutes[0]}</Text>
+                  <Text className="text-[90px] text-black" style={{ fontFamily: 'GoogleSansFlex-9pt-Medium' }}>{minutes[1]}</Text>
                 </View>
-                <View style={styles.arrowContainer}>
-                  <View style={styles.arrowLine} />
-                  <View style={styles.arrowHead} />
+                <View className="flex-row items-center mt-[5px]" style={{ width: 250 }}>
+                  <View className="h-[3px] bg-[#9580FF] flex-1" />
+                  <View className="w-[15px] h-[15px] border-t-[3px] border-r-[3px] border-[#9580FF] -ml-[3px]" style={{ transform: [{ rotate: '45deg' }] }} />
                 </View>
                 
-                <View style={styles.quoteContainer}>
-                  <Text style={styles.quoteText}>{displayedText}</Text>
+                <View className="mt-[30px]" style={{ maxWidth: 450, height: 150 }}>
+                  <Text className="text-[18px] text-black leading-[26px] mb-[10px]" style={{ fontFamily: 'Gilmer-Regular' }}>{displayedText}</Text>
                   <Animated.View style={{ opacity: fadeAnim }}>
-                    <Text style={styles.quoteAuthor}>~ {QUOTES[quoteIndex].author}</Text>
+                    <Text className="text-[16px] text-[#666]" style={{ fontFamily: 'Gilmer-Regular' }}>~ {QUOTES[quoteIndex].author}</Text>
                   </Animated.View>
                 </View>
               </View>
             </View>
 
             {/* Right Column */}
-            <View style={styles.rightColumn}>
-              <View style={styles.googleBtnWrapper}>
+            <View className={`justify-center ${isMd ? 'items-end mt-0' : 'items-stretch mt-10'}`} style={{ flex: 1.4 }}>
+              <View className="w-full items-end mb-10" style={{ maxWidth: 650 }}>
                 <TouchableOpacity 
-                  style={[styles.googleButton, isLoading && { opacity: 0.5 }]} 
+                  className={`flex-row items-center bg-[#9FBFFC] rounded-[30px] py-3 px-5 ${isLoading ? 'opacity-50' : ''}`}
                   onPress={handleGoogleLogin}
                   disabled={isLoading}
                 >
-                  <Text style={styles.googleButtonText}>
+                  <Text className="text-white text-[18px] mr-4" style={{ fontFamily: 'GoogleSansFlex-36pt-Regular' }}>
                     {isLoading ? 'Authenticating...' : 'Sign-up or Sign-in With Google'}
                   </Text>
-                  <View style={styles.googleIconContainer}>
-                    <Image source={require('../../assets/images/Google.webp')} style={styles.googleIcon} resizeMode="contain" />
+                  <View className="bg-[#357AE8] rounded-[20px] justify-center items-center" style={{ width: 40, height: 40 }}>
+                    <Image source={require('../../assets/images/Google.webp')} style={{ width: 24, height: 24 }} resizeMode="contain" />
                   </View>
                 </TouchableOpacity>
               </View>
 
-              <View style={styles.loginCard}>
-                <View style={styles.cardHeader}>
-                  <Text style={styles.cardTitle}>Or With Email</Text>
-                  <View style={styles.hamburgerMenu}>
-                    <View style={styles.hamburgerLine} />
-                    <View style={styles.hamburgerLine} />
-                    <View style={styles.hamburgerLine} />
+              <View className="w-full bg-[#907CFF] rounded-[24px] p-10" style={{ maxWidth: 650 }}>
+                <View className="flex-row justify-between items-center mb-10">
+                  <Text className="text-white text-[24px]" style={{ fontFamily: 'GoogleSansFlex-36pt-Regular' }}>Or With Email</Text>
+                  <View className="flex-row gap-1.5">
+                    <View className="w-[5px] h-[30px] bg-white rounded-[3px]" />
+                    <View className="w-[5px] h-[30px] bg-white rounded-[3px]" />
+                    <View className="w-[5px] h-[30px] bg-white rounded-[3px]" />
                   </View>
                 </View>
 
-                <Text style={styles.inputLabel}>Email</Text>
+                <Text className="text-white text-[18px] mb-2" style={{ fontFamily: 'GoogleSansFlex-36pt-Regular' }}>Email</Text>
                 <TextInput
-                  style={styles.input}
+                  className="border-b-[1px] border-white text-white text-[18px] pt-3 pb-1 mb-8"
+                  style={[{ fontFamily: 'GoogleSansFlex-36pt-Regular' }, Platform.OS === 'web' && { outlineStyle: 'none' }] as any}
                   value={email}
                   onChangeText={setEmail}
                   keyboardType="email-address"
                   autoCapitalize="none"
                 />
 
-                <View style={styles.passwordHeader}>
-                  <Text style={styles.inputLabel}>Password</Text>
+                <View className="flex-row justify-between items-end">
+                  <Text className="text-white text-[18px] mb-2" style={{ fontFamily: 'GoogleSansFlex-36pt-Regular' }}>Password</Text>
                   <TouchableOpacity onPress={() => setShowPassword(!showPassword)}>
                     <Ionicons 
                       name={showPassword ? "eye-outline" : "eye-off-outline"} 
                       size={28} 
                       color="#FFF" 
-                      style={styles.eyeIcon} 
+                      className="mb-2" 
                     />
                   </TouchableOpacity>
                 </View>
                 <TextInput
-                  style={styles.input}
+                  className="border-b-[1px] border-white text-white text-[18px] pt-3 pb-1 mb-8"
+                  style={[{ fontFamily: 'GoogleSansFlex-36pt-Regular' }, Platform.OS === 'web' && { outlineStyle: 'none' }] as any}
                   value={password}
                   onChangeText={setPassword}
                   secureTextEntry={!showPassword}
                 />
 
-                <TouchableOpacity onPress={handleForgotPassword} style={styles.forgotPasswordBtn}>
-                  <Text style={styles.forgotPasswordText}>Forgot Password?</Text>
+                <TouchableOpacity onPress={handleForgotPassword} className="self-end mb-5 -mt-5">
+                  <Text className="text-white text-[14px] underline" style={{ fontFamily: 'Gilmer-Regular' }}>Forgot Password?</Text>
                 </TouchableOpacity>
 
-                <View style={styles.bottomCardSection}>
+                <View className="flex-row justify-between items-center mt-5 flex-wrap gap-4">
                   <ZigZagCaptcha onVerify={(success) => setIsHumanVerified(success)} />
 
                   <TouchableOpacity 
-                    style={[styles.authButton, (!isHumanVerified || isLoading) && { opacity: 0.5 }]} 
+                    className={`bg-[#4DD0E1] py-[14px] px-7 rounded-[30px] ${(!isHumanVerified || isLoading) ? 'opacity-50' : ''}`}
                     onPress={handleLogin}
                     disabled={!isHumanVerified || isLoading}
                   >
-                    <Text style={styles.authButtonText}>
+                    <Text className="text-white text-[18px]" style={{ fontFamily: 'GoogleSansFlex-36pt-Regular' }}>
                       {isLoading ? 'Authenticating...' : 'Authenticate'}
                     </Text>
                   </TouchableOpacity>
@@ -300,252 +314,3 @@ export default function LoginScreen() {
     </SafeAreaView>
   );
 }
-
-const getStyles = (width: number) => StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#E6E4FA', // Very light purple
-  },
-  keyboardView: {
-    flex: 1,
-  },
-  scrollContent: {
-    flexGrow: 1,
-    paddingHorizontal: width > 768 ? '8%' : 20,
-    paddingVertical: width > 768 ? 60 : 20,
-    justifyContent: 'center',
-  },
-  mainLayout: {
-    flexDirection: width > 768 ? 'row' : 'column',
-    justifyContent: 'space-between',
-    flex: 1,
-    width: '100%',
-    maxWidth: 1600,
-    alignSelf: 'center',
-  },
-  leftColumn: {
-    flex: 1,
-    justifyContent: 'space-between',
-    paddingRight: width > 768 ? '5%' : 0,
-    minHeight: width > 768 ? '100%' : 400,
-  },
-  logoContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginBottom: 40,
-  },
-  logo: {
-    width: 80,
-    height: 80,
-    borderRadius: 40,
-    marginRight: 16,
-  },
-  logoTextContainer: {
-    justifyContent: 'center',
-  },
-  brandName: {
-    fontFamily: 'GoogleSansFlex-36pt-Regular',
-    fontSize: 32,
-    color: '#000',
-    marginBottom: 4,
-  },
-  divider: {
-    height: 2,
-    backgroundColor: '#000',
-    width: '100%',
-    marginBottom: 4,
-  },
-  tagline: {
-    fontFamily: 'GoogleSansFlex-36pt-Regular',
-    fontSize: 16,
-    color: '#000',
-  },
-  clockSection: {
-    justifyContent: 'center',
-    flex: 1,
-  },
-  clockContainer: {
-    flexDirection: 'row',
-    alignItems: 'baseline',
-  },
-  clockDigit: {
-    fontFamily: 'GoogleSansFlex-9pt-Medium',
-    fontSize: 90,
-    color: '#000',
-  },
-  clockRed: {
-    color: '#FF0000',
-  },
-  clockPurple: {
-    color: '#9978FF',
-  },
-  arrowContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginTop: 5,
-    width: 250, // Matches width of clock approximately
-  },
-  arrowLine: {
-    height: 3,
-    backgroundColor: '#9580FF',
-    flex: 1,
-  },
-  arrowHead: {
-    width: 15,
-    height: 15,
-    borderTopWidth: 3,
-    borderRightWidth: 3,
-    borderColor: '#9580FF',
-    transform: [{ rotate: '45deg' }],
-    marginLeft: -3,
-  },
-  quoteContainer: {
-    marginTop: 30,
-    maxWidth: 450,
-    height: 150, // Fixed height prevents layout shifting while typing
-  },
-  quoteText: {
-    fontFamily: 'Gilmer-Regular',
-    fontSize: 18,
-    color: '#000',
-    lineHeight: 26,
-    marginBottom: 10,
-  },
-  quoteAuthor: {
-    fontFamily: 'Gilmer-Regular',
-    fontSize: 16,
-    color: '#666',
-  },
-  rightColumn: {
-    flex: 1.4,
-    justifyContent: 'center',
-    alignItems: width > 768 ? 'flex-end' : 'stretch',
-    marginTop: width > 768 ? 0 : 40,
-  },
-  googleBtnWrapper: {
-    width: '100%',
-    maxWidth: 650, // aligns with max width of card if added
-    alignItems: 'flex-end',
-    marginBottom: 20,
-  },
-  googleButton: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: '#9FBFFC', // Light blue matching design
-    borderRadius: 30,
-    paddingVertical: 12,
-    paddingHorizontal: 20,
-  },
-  googleButtonText: {
-    fontFamily: 'GoogleSansFlex-36pt-Regular',
-    color: '#FFF',
-    fontSize: 18,
-    marginRight: 16,
-  },
-  googleIconContainer: {
-    backgroundColor: '#357AE8', // Darker blue for circle
-    borderRadius: 20,
-    width: 40,
-    height: 40,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  googleIcon: {
-    width: 24,
-    height: 24,
-  },
-  loginCard: {
-    width: '100%',
-    maxWidth: 650,
-    backgroundColor: '#907CFF', // Purple card
-    borderRadius: 24,
-    padding: 40,
-  },
-  cardHeader: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginBottom: 40,
-  },
-  cardTitle: {
-    fontFamily: 'GoogleSansFlex-36pt-Regular',
-    color: '#FFF',
-    fontSize: 24,
-  },
-  hamburgerMenu: {
-    flexDirection: 'row',
-    gap: 6,
-  },
-  hamburgerLine: {
-    width: 5,
-    height: 30,
-    backgroundColor: '#FFF',
-    borderRadius: 3,
-  },
-  inputLabel: {
-    fontFamily: 'GoogleSansFlex-36pt-Regular',
-    color: '#FFF',
-    fontSize: 18,
-    marginBottom: 8,
-  },
-  input: {
-    fontFamily: 'GoogleSansFlex-36pt-Regular',
-    borderBottomWidth: 1,
-    borderBottomColor: '#FFF',
-    color: '#FFF',
-    fontSize: 18,
-    paddingTop: 12,
-    paddingBottom: 4,
-    marginBottom: 32,
-    ...(Platform.OS === 'web' && { outlineStyle: 'none' }),
-  } as any,
-  passwordHeader: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'flex-end',
-  },
-  eyeIcon: {
-    color: '#FFF',
-    marginBottom: 8,
-  },
-  forgotPasswordBtn: {
-    alignSelf: 'flex-end',
-    marginBottom: 20,
-    marginTop: -20,
-  },
-  forgotPasswordText: {
-    color: '#FFF',
-    fontFamily: 'Gilmer-Regular',
-    fontSize: 14,
-    textDecorationLine: 'underline',
-  },
-  bottomCardSection: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginTop: 20,
-    flexWrap: 'wrap',
-    gap: 16,
-  },
-  captchaBox: {
-    backgroundColor: '#FFF',
-    paddingVertical: 14,
-    paddingHorizontal: 28,
-    borderRadius: 4,
-  },
-  captchaText: {
-    color: '#000',
-    fontSize: 16,
-  },
-  authButton: {
-    backgroundColor: '#4DD0E1', // Teal/Cyan
-    paddingVertical: 14,
-    paddingHorizontal: 28,
-    borderRadius: 30,
-  },
-  authButtonText: {
-    fontFamily: 'GoogleSansFlex-36pt-Regular',
-    color: '#FFF',
-    fontSize: 18,
-  },
-});
