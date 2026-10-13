@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Animated, Image, KeyboardAvoidingView, Platform, SafeAreaView, ScrollView, Text, TextInput, TouchableOpacity, View, useWindowDimensions } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import ZigZagCaptcha from '../components/ZigZagCaptcha';
-import { signInWithEmailAndPassword, createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, sendPasswordResetEmail } from 'firebase/auth';
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword, sendPasswordResetEmail } from 'firebase/auth';
 import { auth } from '../firebaseConfig';
 import { useRouter } from 'expo-router';
 import Toast from '../components/Toast';
@@ -116,7 +116,7 @@ export default function LoginScreen() {
           router.replace('/home');
         } catch (signUpError: any) {
           if (signUpError.code === 'auth/email-already-in-use') {
-            showToast("Invalid credentials or email already in use. Please check your password or try signing in with Google.", 'info');
+            showToast("Invalid credentials or email already in use. Please check your password.", 'info');
           } else {
             console.error("Sign up error:", signUpError);
             showToast("Sign up failed: " + signUpError.message, 'error');
@@ -128,29 +128,6 @@ export default function LoginScreen() {
       }
     } finally {
       setIsLoading(false);
-    }
-  };
-
-  const handleGoogleLogin = async () => {
-    if (Platform.OS === 'web') {
-      setIsLoading(true);
-      try {
-        const provider = new GoogleAuthProvider();
-        const result = await signInWithPopup(auth, provider);
-        console.log("Google logged in with:", result.user.email);
-        router.replace('/home');
-      } catch (error: any) {
-        if (error.code === 'auth/account-exists-with-different-credential' || error.code === 'auth/email-already-in-use') {
-          showToast("An account already exists with this email using a password. Please log in with Email & Password in the section below.", 'info');
-        } else if (error.code !== 'auth/popup-closed-by-user') {
-          console.error("Google login error:", error);
-          showToast("Google Login Failed: " + error.message, 'error');
-        }
-      } finally {
-        setIsLoading(false);
-      }
-    } else {
-      showToast("Google login for mobile requires additional native setup.", 'error');
     }
   };
 
@@ -239,24 +216,9 @@ export default function LoginScreen() {
 
             {/* Right Column */}
             <View className={`justify-center ${isMd ? 'items-end mt-0' : 'items-stretch w-full'}`} style={{ flex: 1.1 }}>
-              <View className={`w-full mb-4 ${isMd ? 'items-end' : ''}`} style={{ maxWidth: 650 }}>
-                <TouchableOpacity 
-                  className={`flex-row items-center bg-[#7D93FF] rounded-2xl py-3 px-4 ${!isMd ? 'w-full justify-between' : 'justify-between min-w-[320px]'} ${isLoading ? 'opacity-50' : ''}`}
-                  onPress={handleGoogleLogin}
-                  disabled={isLoading}
-                >
-                  <Text className={`text-white pl-1 tracking-wide ${isMd ? 'text-[18px]' : 'text-[15px]'}`} style={{ fontFamily: 'GoogleSansFlex-36pt-Regular' }}>
-                    {isLoading ? 'Authenticating...' : 'Sign-up or Sign-in With Google'}
-                  </Text>
-                  <View className="bg-white rounded-full justify-center items-center ml-2" style={{ width: 32, height: 32 }}>
-                    <Image source={require('../../assets/images/Google.webp')} style={{ width: 18, height: 18 }} resizeMode="contain" />
-                  </View>
-                </TouchableOpacity>
-              </View>
-
               <View className="w-full bg-[#907CFF] rounded-[24px] p-6 md:p-10" style={{ maxWidth: 650 }}>
                 <View className="flex-row justify-between items-center mb-10">
-                  <Text className={`text-white ${isMd ? 'text-[24px]' : 'text-[20px]'}`} style={{ fontFamily: 'GoogleSansFlex-36pt-Regular' }}>Or With Email</Text>
+                  <Text className={`text-white ${isMd ? 'text-[24px]' : 'text-[20px]'}`} style={{ fontFamily: 'GoogleSansFlex-36pt-Regular' }}>Sign In</Text>
                   <View className="flex-row gap-1.5">
                     <View className="w-[5px] h-[30px] bg-white rounded-[3px]" />
                     <View className="w-[5px] h-[30px] bg-white rounded-[3px]" />
