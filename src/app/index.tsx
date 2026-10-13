@@ -3,7 +3,8 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { useRouter } from 'expo-router';
 import { createUserWithEmailAndPassword, sendPasswordResetEmail, signInWithEmailAndPassword } from 'firebase/auth';
 import { useEffect, useRef, useState } from 'react';
-import { Animated, Image, KeyboardAvoidingView, Platform, SafeAreaView, ScrollView, Text, TextInput, TouchableOpacity, View, useWindowDimensions } from 'react-native';
+import { Animated, Image, KeyboardAvoidingView, Platform, ScrollView, Text, TextInput, TouchableOpacity, View, useWindowDimensions } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import Toast from '../components/Toast';
 import ZigZagCaptcha from '../components/ZigZagCaptcha';
 import { auth } from '../firebaseConfig';
@@ -243,7 +244,7 @@ export default function LoginScreen() {
                       name={showPassword ? "eye-outline" : "eye-off-outline"} 
                       size={28} 
                       color="#FFF" 
-                      className="mb-2" 
+                      style={{ marginBottom: 8 }} 
                     />
                   </TouchableOpacity>
                 </View>
