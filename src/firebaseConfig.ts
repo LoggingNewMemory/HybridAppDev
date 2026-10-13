@@ -1,7 +1,7 @@
-// Import the functions you need from the SDKs you need
-import { getAnalytics } from "firebase/analytics";
+import { getAnalytics, isSupported } from "firebase/analytics";
 import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth"; // 👈 Tambahkan ini untuk fitur Login!
+import { getAuth } from "firebase/auth";
+import { Platform } from "react-native";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -17,9 +17,15 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-let analytics;
-if (typeof window !== 'undefined') {
-  analytics = getAnalytics(app);
+let analytics: any = null;
+if (Platform.OS === 'web' && typeof window !== 'undefined' && typeof document !== 'undefined') {
+  isSupported().then((supported) => {
+    if (supported) {
+      analytics = getAnalytics(app);
+    }
+  }).catch(() => {
+    // Ignore analytics unsupported environment
+  });
 }
 
 // 👈 Export 'auth' dan 'app' agar bisa dipanggil dari layar Login-mu nanti
