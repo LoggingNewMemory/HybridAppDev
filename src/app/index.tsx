@@ -218,7 +218,7 @@ export default function LoginScreen() {
             <View className={`justify-center ${isMd ? 'items-end mt-0' : 'items-stretch w-full'}`} style={{ flex: 1.1 }}>
               <View className="w-full bg-[#907CFF] rounded-[24px] p-6 md:p-10" style={{ maxWidth: 650 }}>
                 <View className="flex-row justify-between items-center mb-10">
-                  <Text className={`text-white ${isMd ? 'text-[24px]' : 'text-[20px]'}`} style={{ fontFamily: 'GoogleSansFlex-36pt-Regular' }}>Sign In</Text>
+                  <Text className={`text-white ${isMd ? 'text-[24px]' : 'text-[20px]'}`} style={{ fontFamily: 'GoogleSansFlex-36pt-Regular' }}>Sign-in or Sign-Up</Text>
                   <View className="flex-row gap-1.5">
                     <View className="w-[5px] h-[30px] bg-white rounded-[3px]" />
                     <View className="w-[5px] h-[30px] bg-white rounded-[3px]" />
