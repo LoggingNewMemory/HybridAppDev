@@ -1,12 +1,12 @@
+import { Ionicons } from '@expo/vector-icons';
+import { LinearGradient } from 'expo-linear-gradient';
+import { useRouter } from 'expo-router';
+import { createUserWithEmailAndPassword, sendPasswordResetEmail, signInWithEmailAndPassword } from 'firebase/auth';
 import { useEffect, useRef, useState } from 'react';
 import { Animated, Image, KeyboardAvoidingView, Platform, SafeAreaView, ScrollView, Text, TextInput, TouchableOpacity, View, useWindowDimensions } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
-import ZigZagCaptcha from '../components/ZigZagCaptcha';
-import { signInWithEmailAndPassword, createUserWithEmailAndPassword, sendPasswordResetEmail } from 'firebase/auth';
-import { auth } from '../firebaseConfig';
-import { useRouter } from 'expo-router';
 import Toast from '../components/Toast';
-import { LinearGradient } from 'expo-linear-gradient';
+import ZigZagCaptcha from '../components/ZigZagCaptcha';
+import { auth } from '../firebaseConfig';
 
 const QUOTES = [
   { text: "Pendidikan adalah senjata paling ampuh yang bisa kamu gunakan untuk mengubah dunia.", author: "Nelson Mandela" },
@@ -189,7 +189,7 @@ export default function LoginScreen() {
 
           {/* Left Column */}
             <View 
-              className={`${isMd ? 'flex-1' : 'w-full'} justify-center ${!isMd ? 'bg-white/40 rounded-2xl p-3 border-[1px] border-white/60 mb-5' : ''}`} 
+              className={`${isMd ? 'flex-1' : 'w-full'} justify-center ${!isMd ? 'bg-white/40 rounded-2xl p-3 border-[1px] border-white/60 mb-0' : ''}`} 
               style={isMd ? { paddingRight: '5%' } : {}}
             >
               <View className={isMd ? 'flex-col' : 'flex-row items-center mb-1'}>
