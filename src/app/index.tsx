@@ -1,9 +1,9 @@
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useRouter } from 'expo-router';
-import { createUserWithEmailAndPassword, sendPasswordResetEmail, signInWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword } from 'firebase/auth';
 import { useEffect, useRef, useState } from 'react';
-import { Animated, Image, KeyboardAvoidingView, Platform, ScrollView, Text, TextInput, TouchableOpacity, View, useWindowDimensions } from 'react-native';
+import { ActivityIndicator, Animated, Image, KeyboardAvoidingView, Platform, ScrollView, Text, TextInput, TouchableOpacity, View, useWindowDimensions } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Toast from '../components/Toast';
 import ZigZagCaptcha from '../components/ZigZagCaptcha';
@@ -32,6 +32,7 @@ export default function LoginScreen() {
   const [isHumanVerified, setIsHumanVerified] = useState(false);
   const [time, setTime] = useState(new Date());
   const [isLoading, setIsLoading] = useState(false);
+  const [isCheckingAuth, setIsCheckingAuth] = useState(true);
   
   const [toast, setToast] = useState<{message: string, type: 'error' | 'success' | 'info'} | null>(null);
 
@@ -42,6 +43,19 @@ export default function LoginScreen() {
   const [quoteIndex, setQuoteIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState('');
   const fadeAnim = useRef(new Animated.Value(0)).current;
+
+  // Auto-redirect if user session is remembered
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        router.replace('/home');
+      } else {
+        setIsCheckingAuth(false);
+      }
+    });
+
+    return () => unsubscribe();
+  }, [router]);
 
   useEffect(() => {
     const quoteInterval = setInterval(() => {
@@ -149,6 +163,16 @@ export default function LoginScreen() {
       setIsLoading(false);
     }
   };
+
+  if (isCheckingAuth) {
+    return (
+      <LinearGradient colors={['rgba(148, 127, 245, 0.15)', '#FFFFFF']} start={{ x: 1, y: 0 }} end={{ x: 0, y: 1 }} style={{ flex: 1 }}>
+        <SafeAreaView className="flex-1 items-center justify-center">
+          <ActivityIndicator size="large" color="#907CFF" />
+        </SafeAreaView>
+      </LinearGradient>
+    );
+  }
 
   return (
     <LinearGradient colors={['rgba(148, 127, 245, 0.15)', '#FFFFFF']} start={{ x: 1, y: 0 }} end={{ x: 0, y: 1 }} style={{ flex: 1 }}>
