@@ -1,4 +1,4 @@
-import { Image, View } from "react-native";
+import { Image, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
@@ -6,10 +6,10 @@ export default function Index() {
     <SafeAreaView className="flex-1 bg-[#e4e8fb] flex-col justify-between px-5 pt-8 pb-6">
 
       {/* <header class="flex items-center justify-between mb-5" data-purpose="brand-header"> */}
-      <View className="flex-row items-center justify between mb-5">
+      <View className="flex-row items-center justify-between mb-5">
 
       {/* <div class="flex items-center space-x-3.5"> */}
-      <View className="flex-row items-center space-x-3.5">
+      <View className="flex-row items-center gap-3.5">
 
       {/*<div class="relative w-14 h-14 rounded-full overflow-hidden border-2 border-white shadow-sm ring-2 ring-brand-card/20 flex-shrink-0 bg-white"> */}
       <View className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-white shadow-sm ring-2 ring-brand-card/20 flex-shrink-0 bg-white">
@@ -22,7 +22,29 @@ export default function Index() {
       />
       </View>
       </View>
-      </View>      
+      </View>
+
+      <View>
+      {/*<div class="relative inline-block">*/}
+      <View className="relative self-start">
+      </View>
+      {/*<h1 class="text-2xl font-bold tracking-tight text-slate-900 leading-tight">A-Chan</h1>*/}
+      <Text>
+        <Text className="text-2xl font-bold tracking-tight text-slate-900 leading-tight">
+          A-Chan
+        </Text>
+      </Text>
+      {/*<div class="h-[2px] w-full bg-slate-900 rounded-full mt-0.5"></div> */}
+      <View className="h-[2px] w-full bg-slate-900 rounded-full mt-0.5">
+      </View>
+
+      {/*<p class="text-[12px] font-medium text-slate-700 leading-none mt-1">All In One Education Platform</p> */}
+      <Text>
+        <Text className="text-[12px] font-medium text-slate-700 leading-none mt-1">
+        All In One Education Platform
+        </Text>
+      </Text>
+      </View>
     </SafeAreaView>
   );
 }
