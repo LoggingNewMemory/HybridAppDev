@@ -47,3 +47,6 @@ example
 
 # Zip archives
 *.zip
+
+# EXPO EXPORTED
+ExpoSTITCH/*
