@@ -42,7 +42,7 @@ export default function Index() {
           </View>
         </View>
 
-      {/* Clock and Quote
+      {/* {/* Clock and Quote
       Original: 
       <div class="mb-5" data-purpose="clock-and-quote">
       <div class="bg-white/40 backdrop-blur-sm rounded-2xl p-4 border border-white/60">
