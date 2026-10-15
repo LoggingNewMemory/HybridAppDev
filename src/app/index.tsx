@@ -3,7 +3,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
   return (
-    <SafeAreaView className="flex-1 bg-[#e4e8fb] flex-col justify-between px-5 pt-8 pb-6">
+    <SafeAreaView className="flex-1 bg-[#e4e8fb] flex-col justify-between px-5 pt-3 pb-6">
 
       {/* <header class="flex items-center justify-between mb-5" data-purpose="brand-header"> */}
       <View className="flex-row items-center justify-between mb-5">
