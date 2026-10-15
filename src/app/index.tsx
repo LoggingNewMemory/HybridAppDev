@@ -1,17 +1,28 @@
-import { Text, View, StyleSheet } from "react-native";
+import { Image, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
   return (
-    <View style={styles.container}>
-      <Text>Edit src/app/index.tsx to edit this screen.</Text>
-    </View>
+    <SafeAreaView className="flex-1 bg-[#e4e8fb] flex-col justify-between px-5 pt-8 pb-6">
+
+      {/* <header class="flex items-center justify-between mb-5" data-purpose="brand-header"> */}
+      <View className="flex-row items-center justify between mb-5">
+
+      {/* <div class="flex items-center space-x-3.5"> */}
+      <View className="flex-row items-center space-x-3.5">
+
+      {/*<div class="relative w-14 h-14 rounded-full overflow-hidden border-2 border-white shadow-sm ring-2 ring-brand-card/20 flex-shrink-0 bg-white"> */}
+      <View className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-white shadow-sm ring-2 ring-brand-card/20 flex-shrink-0 bg-white">
+      
+      {/*<img alt="A-Chan  Mascot" class="w-full h-full object-cover object-top scale-[2.2] translate-y-2 -translate-x-1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3A6Jqo6U0vOmNOHiWSa0f_wyQV7M6lOzE_8XRsbSBsMFlZGmEZaENR5irBXtTxyvYutlAXylxfddLAkF8zXQwsWWZr0tz_TUm3dIPFiGe2k6nCP9fFcH5rt5iGt9dyjO4RYQdk0NvgWNpYSpVtCLUt-9Ea8ycHGs3wl5SqwZOUIyDP-ZyjIrF9NeNeNfL3p_gqE_mu5xngO3ipIlgcmvN-DHO7-OOxplu6dl1IEvCNeskZ0CFVZh5M0NBmWosVdAc5Q">*/}
+      <Image 
+        source={{ uri: "https://avatars.githubusercontent.com/u/83739103?v=4"}}
+        className="w-full h-full"
+        resizeMode="cover"
+      />
+      </View>
+      </View>
+      </View>      
+    </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
