@@ -160,6 +160,26 @@ export default function Index() {
             />
           </View>
         </View>
+          {/* <div class="space-y-2 pt-1">
+        <label class="block text-white/90 text-xs font-semibold uppercase tracking-wider pl-0.5" for="password">
+          Password
+        </label>
+        <div class="relative flex items-center">
+          <input class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3.5 pr-12 text-base text-white placeholder-white/40 focus:outline-none focus:border-white focus:bg-white/15 focus:ring-0 transition-all shadow-inner" id="password" name="password" placeholder="••••••••" required="" type="password"></input> */}
+        <View className="space-y-2 pt-1 gap-2">
+                   <Text className="text-white/90 text-xs font-semibold uppercase tracking-wider pl-0.5">
+          Password
+        </Text>
+        <View className="relative">
+                    <TextInput
+            placeholder="••••••••"
+            placeholderTextColor="rgba(255, 255, 255, 0.4)"
+            secureTextEntry={true}
+            autoCapitalize="none"
+            className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3.5 pr-12 text-base text-white"
+            />
+        </View>
+        </View>
 
       </View>
 
