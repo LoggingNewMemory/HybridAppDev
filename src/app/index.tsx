@@ -41,6 +41,7 @@ export default function Index() {
             </View>
           </View>
         </View>
+      </View>
 
       {/* {/* Clock and Quote
       Original: 
@@ -98,6 +99,7 @@ export default function Index() {
                 →
           </Text>
           </View>
+        </View>
 
       {/* <blockquote class="text-[13px] text-slate-800 leading-snug font-normal">
       “Pendidikan adalah senjata paling ampuh yang bisa kamu gunakan untuk mengubah dunia” */}
@@ -113,10 +115,7 @@ export default function Index() {
       </Text>
         </View>
         </View>
-        </View>
-        </View>
 
-      </View>
     </SafeAreaView>
   );
 }
