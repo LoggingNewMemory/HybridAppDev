@@ -113,6 +113,8 @@ export default function Index() {
         </View>
       </View>
       
+    <View className="w-full bg-[#8370ed] rounded-3xl shadow-xl relative overflow-hidden flex-1 flex-col justify-between mb-5 p-7">
+
       {/* <div class="flex items-center justify-between mb-6">
       <h2 class="text-xl font-semibold tracking-tight text-white/95">Or With Email</h2>
       <!-- Three Vertical Bars Accent -->
@@ -121,7 +123,15 @@ export default function Index() {
         <span class="w-[5px] h-6 bg-white rounded-full inline-block"></span>
         <span class="w-[5px] h-6 bg-white rounded-full inline-block"></span>
       </div>
-    </div> */}
+      </div> */}
+
+        <View className="flex justify-between mb-6">
+          <Text className="text-xl font-semibold tracking-tight text-white/95">
+          Login / Register
+          </Text>
+        </View>
+      </View>
+
     </SafeAreaView>
   );
 }
