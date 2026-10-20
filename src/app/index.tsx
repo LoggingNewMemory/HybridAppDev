@@ -125,10 +125,17 @@ export default function Index() {
       </div>
       </div> */}
 
-        <View className="flex justify-between mb-6">
+        <View className="flex-row justify-between mb-6">
           <Text className="text-xl font-semibold tracking-tight text-white/95">
           Login / Register
           </Text>
+
+          <View className="flex-row items-center gap-1.5 opacity-90">
+            <View className="w-[5px] h-6 bg-white rounded-full" />
+            <View className="w-[5px] h-6 bg-white rounded-full" />
+            <View className="w-[5px] h-6 bg-white rounded-full" />
+          </View>
+
         </View>
       </View>
 
