@@ -3,7 +3,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
   return (
-    <SafeAreaView className="flex-1 bg-[#e4e8fb] flex-col justify-between px-5 pt-3 pb-6">
+    <SafeAreaView className="flex-1 bg-[#e4e8fb] flex-col px-5 pt-3 pb-6">
 
       {/* <header class="flex items-center justify-between mb-5" data-purpose="brand-header"> */}
       <View className="flex-row items-center justify-between mb-5">
@@ -74,7 +74,7 @@ export default function Index() {
 
         <View className="mb-5" data-purpose="clock-and-quote">
         <View className="bg-white/40 backdrop-blur-sm rounded-2xl p-4 border border-white/60">
-        <View className="flex items-center space-x-3 mb-2">
+        <View className="flex-row items-center space-x-3 mb-2">
 
       {/*
       <div class="font-bold tracking-tight text-3xl flex items-baseline"> 
@@ -95,9 +95,6 @@ export default function Index() {
       <div class="h-[2px] w-full bg-[#9682f6] rounded-full"></div> */}
           <View className="flex-1 flex-row items-center pl-2">
           <View className="h-[2px] flex-1 bg-[#9682f6] rounded-full" />
-          <Text className="text-[#9682f6] font-bold text-lg -ml-1.5">
-                →
-          </Text>
           </View>
         </View>
 
