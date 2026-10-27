@@ -20,7 +20,7 @@ export default function Index() {
                             </Text>
                         </View>
                         {/* <p class="font-body-md text-body-md text-on-surface-variant">Yuk lanjutkan progres belajarmu hari ini!</p> */}
-                        <Text className="font-body-md text-body-md text-on-surface-variant">
+                        <Text className="text-sm text-slate-500 mt-1">
                             Yuk lanjutkan progres belajarmu hari ini!
                         </Text>
                     </View>
