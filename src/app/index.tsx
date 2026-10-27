@@ -1,4 +1,4 @@
-import { Image, Text, TextInput, View } from "react-native";
+import { Image, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
@@ -180,7 +180,24 @@ export default function Index() {
             />
         </View>
         </View>
+        
+        <View ClassName="pt-2 gap-4"> 
+        {/* <button class="w-full bg-[#41cddc] hover:bg-[#34becd] active:scale-[0.98] text-white font-bold py-4 px-6 rounded-xl shadow-md transition-all duration-200 text-center text-base tracking-wide flex items-center justify-center space-x-2" type="submit">
+        <span class="">Authenticate</span>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+        </svg>
+      </button> */}
+          {/* <button class="w-full bg-[#41cddc] hover:bg-[#34becd] active:scale-[0.98] text-white font-bold py-4 px-6 rounded-xl shadow-md transition-all duration-200 text-center text-base tracking-wide flex items-center justify-center space-x-2" type="submit"> */}
+        <TouchableOpacity 
+          activeOpacity={0.7}
+          className="w-full bg-[#41cddc] py-4 px-6 rounded-xl shadow-md flex-row items-center justify-center gap-2"
+        >
+          <Text className="text-white font-bold text-base tracking-wide">
+            Authenticate
+          </Text>
 
+        </View>
       </View>
 
       </View>
