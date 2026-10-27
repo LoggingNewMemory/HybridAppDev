@@ -1,3 +1,4 @@
+import { router } from "expo-router";
 import { Image, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -192,6 +193,7 @@ export default function Index() {
         <TouchableOpacity 
           activeOpacity={0.7}
           className="w-full bg-[#41cddc] py-4 px-6 rounded-xl shadow-md flex-row items-center justify-center gap-2"
+          onPress={() => router.push('/homepage')}
         >
           <Text className="text-white font-bold text-base tracking-wide">
             Authenticate
