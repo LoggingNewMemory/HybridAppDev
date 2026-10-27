@@ -19,12 +19,31 @@ export default function Index() {
                                 Halo, Mas Kakang!
                             </Text>
                         </View>
-                            {/* <p class="font-body-md text-body-md text-on-surface-variant">Yuk lanjutkan progres belajarmu hari ini!</p> */}
-                            <Text className="font-body-md text-body-md text-on-surface-variant">
-                                Yuk lanjutkan progres belajarmu hari ini!
-                            </Text>
+                        {/* <p class="font-body-md text-body-md text-on-surface-variant">Yuk lanjutkan progres belajarmu hari ini!</p> */}
+                        <Text className="font-body-md text-body-md text-on-surface-variant">
+                            Yuk lanjutkan progres belajarmu hari ini!
+                        </Text>
                     </View>
                 </View>
+                {/* <div class="relative overflow-hidden rounded-2xl p-space-lg text-on-primary shadow-[0_8px_24px_rgba(88,73,192,0.22)]" style="background-color: #6c5ce7;"> */}
+                <View className="relative overflow-hidden rounded-2xl p-5 shadow-lg bg-[#6c5ce7] mt-3">
+                    <View className="relative z-10 flex-col gap-4">
+                        <View className="relative">
+                            <Text className="text-base italic font-medium leading-relaxed text-white/95">
+                                “Pendidikan adalah senjata paling ampuh yang bisa kamu gunakan untuk mengubah dunia.”
+                            </Text>
+                        </View>
+                        {/* <div class="flex items-center justify-between pt-space-xs border-t border-white/15 text-white/90">
+      <span class="font-label-md text-label-md font-bold text-secondary-fixed tracking-wide">~ Nelson Mandela</span> */}
+                        <View className="flex-row items-center justify-between pt-3 border-t border-white/15">
+                        <Text className="text-sm font-bold text-[#41cddc] tracking-wide">
+                           ~ Nelson Mandela
+                        </Text>
+                        </View>
+                    </View>
+                </View>
+
+
             </View>
         </SafeAreaView>
     )
