@@ -1,4 +1,4 @@
-import { Text, View } from "react-native";
+import { Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
@@ -91,6 +91,28 @@ export default function Index() {
                             <View className="bg-[#00696c]/10 px-2 py-1 rounded-lg shrink-0">
                                 <Text className="text-xs font-bold text-[#00696c]">65%</Text>
                             </View>
+                        </View>
+                        {/* <div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+                    </div>
+                    <div class="flex items-center justify-between pt-space-xs">
+                    <div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-[16px]">schedule</span><span class="font-label-sm text-label-sm">Sisa 7 materi</span></div>
+                    <button class="bg-primary text-on-primary font-label-md text-label-md px-space-md py-1.5 rounded-full shadow-[0_2px_8px_rgba(88,73,192,0.25)] hover:scale-[1.02] transition-transform flex items-center gap-1">
+                    <span class="">Lanjutkan</span>
+                    <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                    </button>
+                    </div> */}
+                        <View className="w-full bg-slate-200 h-2 rounded-full overflow-hidden mt-1">
+                            <View className="bg-[#5849c0] h-full rounded-full" style={{ width: '65%' }} />
+                        </View>
+                        <View className="flex-row items-center justify-between pt-1">
+                            <View className="flex-row items-center gap-1">
+                                <Text className="text-xs font-semibold text-slate-500">Sisa 7 materi</Text>
+                            </View>
+                            <TouchableOpacity
+                                activeOpacity={0.7}
+                                className="bg-[#5849c0] px-4 py-1.5 rounded-full flex-row items-center gap-1 shadow-sm">
+                                <Text className="text-white text-xs font-semibold">Lanjutkan</Text>
+                            </TouchableOpacity>
                         </View>
                     </View>
                 </View>
