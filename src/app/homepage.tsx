@@ -16,7 +16,7 @@ export default function Index() {
                     <View className="min-w-0">
                         <View className="flex-row items-center gap-2">
                             <Text className="text-2xl font-bold text-slate-900 truncate">
-                                Halo, Mas Kakang!
+                                Halo, Kanata-chan!
                             </Text>
                         </View>
                         {/* <p class="font-body-md text-body-md text-on-surface-variant">Yuk lanjutkan progres belajarmu hari ini!</p> */}
@@ -34,7 +34,7 @@ export default function Index() {
                             </Text>
                         </View>
                         {/* <div class="flex items-center justify-between pt-space-xs border-t border-white/15 text-white/90">
-      <span class="font-label-md text-label-md font-bold text-secondary-fixed tracking-wide">~ Nelson Mandela</span> */}
+                        <span class="font-label-md text-label-md font-bold text-secondary-fixed tracking-wide">~ Nelson Mandela</span> */}
                         <View className="flex-row items-center justify-between pt-3 border-t border-white/15">
                         <Text className="text-sm font-bold text-[#41cddc] tracking-wide">
                            ~ Nelson Mandela
@@ -42,7 +42,22 @@ export default function Index() {
                         </View>
                     </View>
                 </View>
-
+            {/* <section class="flex flex-col gap-space-sm">
+            <div class="flex items-center justify-between">
+            <div>
+            <h2 class="font-title-md text-title-md font-bold text-on-surface">Lanjutkan Belajar</h2>
+            <p class="font-label-sm text-label-sm text-on-surface-variant">Selesaikan materi yang sedang berjalan</p>
+            </div> */}
+            <View className="flex-col gap-4 mt-3">
+                <View className="flex justify-between">
+                <Text className="text-xl font-bold text-slate-900">
+                Lanjutkan Belajar
+                </Text>
+                <Text className="text-sm text-slate-500 mt-0.5">
+                Selesaikan materi yang sedang berjalan
+                </Text>
+                </View>
+            </View>
 
             </View>
         </SafeAreaView>
