@@ -18,8 +18,11 @@ export default function Index() {
                             <Text className="text-2xl font-bold text-slate-900 truncate">
                                 Halo, Mas Kakang!
                             </Text>
-
                         </View>
+                            {/* <p class="font-body-md text-body-md text-on-surface-variant">Yuk lanjutkan progres belajarmu hari ini!</p> */}
+                            <Text className="font-body-md text-body-md text-on-surface-variant">
+                                Yuk lanjutkan progres belajarmu hari ini!
+                            </Text>
                     </View>
                 </View>
             </View>
