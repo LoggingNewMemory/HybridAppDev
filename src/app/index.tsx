@@ -181,7 +181,7 @@ export default function Index() {
         </View>
         </View>
         
-        <View ClassName="pt-2 gap-4"> 
+        <View className="pt-2 gap-4"> 
         {/* <button class="w-full bg-[#41cddc] hover:bg-[#34becd] active:scale-[0.98] text-white font-bold py-4 px-6 rounded-xl shadow-md transition-all duration-200 text-center text-base tracking-wide flex items-center justify-center space-x-2" type="submit">
         <span class="">Authenticate</span>
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -196,7 +196,7 @@ export default function Index() {
           <Text className="text-white font-bold text-base tracking-wide">
             Authenticate
           </Text>
-
+        </TouchableOpacity>
         </View>
       </View>
 
