@@ -6,11 +6,11 @@ export default function Index() {
         <SafeAreaView className="flex-1 bg-[#e4e8fb] flex-col px-5 pt-3 pb-6">
             <View className="flex flex-col gap-3 pt-2">
                 <View className="flex-row items-center gap-3 min-w-0">
-                    <Image 
-                            source={require('../../Designs/Kanata.png')} 
-                            className="w-14 h-14 rounded-full border-2 border-white shadow-sm"
-                            resizeMode="cover"
-                        />
+                    <Image
+                        source={require('../../Designs/Kanata.png')}
+                        className="w-14 h-14 rounded-full border-2 border-white shadow-sm"
+                        resizeMode="cover"
+                    />
                     <View className="min-w-0">
                         <View className="flex-row items-center gap-2">
                             <Text className="text-2xl font-bold text-slate-900 truncate">
@@ -110,6 +110,27 @@ export default function Index() {
                             </TouchableOpacity>
                         </View>
                     </View>
+                </View>
+            </View>
+            <View className="absolute bottom-0 left-0 right-0 bg-white/95 border-t border-slate-200 pt-2 pb-6 px-4 shadow-xl">
+                <View className="flex-row justify-around items-center h-14">
+                    <TouchableOpacity activeOpacity={0.7} className="flex-col items-center justify-center gap-1 min-w-[56px]">
+                        <Text className="text-xl">🏠</Text>
+                        <Text className="text-[10px] font-bold text-[#5849c0]">Beranda</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity activeOpacity={0.7} className="flex-col items-center justify-center gap-1 min-w-[56px]">
+                        <Text className="text-xl opacity-60">📖</Text>
+                        <Text className="text-[10px] font-medium text-slate-500">Belajar</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity activeOpacity={0.7} className="flex-col items-center justify-center gap-1 min-w-[56px]">
+                        <Text className="text-xl opacity-60">📝</Text>
+                        <Text className="text-[10px] font-medium text-slate-500">Tugas</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity activeOpacity={0.7} className="flex-col items-center justify-center gap-1 min-w-[56px]">
+                        <Text className="text-xl opacity-60">👤</Text>
+                        <Text className="text-[10px] font-medium text-slate-500">Profil</Text>
+                    </TouchableOpacity>
                 </View>
             </View>
         </SafeAreaView>
