@@ -9,7 +9,7 @@ export default function Index() {
         <View className="flex-row items-center gap-3.5">
           <View className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-white shadow-sm ring-2 ring-brand-card/20 flex-shrink-0 bg-white">
             <Image
-              source={{ uri: "https://avatars.githubusercontent.com/u/83739103?v=4" }}
+              source={require('../../Designs/AChan.png')}
               className="w-full h-full"
               resizeMode="cover"
             />

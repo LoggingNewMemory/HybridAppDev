@@ -1,11 +1,16 @@
-import { Text, TouchableOpacity, View } from "react-native";
+import { Image, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
     return (
         <SafeAreaView className="flex-1 bg-[#e4e8fb] flex-col px-5 pt-3 pb-6">
             <View className="flex flex-col gap-3 pt-2">
-                <View className="flex-row items-center justify-between">
+                <View className="flex-row items-center gap-3 min-w-0">
+                    <Image 
+                            source={require('../../Designs/Kanata.png')} 
+                            className="w-14 h-14 rounded-full border-2 border-white shadow-sm"
+                            resizeMode="cover"
+                        />
                     <View className="min-w-0">
                         <View className="flex-row items-center gap-2">
                             <Text className="text-2xl font-bold text-slate-900 truncate">
