@@ -1,3 +1,4 @@
+import { router } from "expo-router";
 import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView, useSafeAreaInsets } from "react-native-safe-area-context";
 
@@ -118,29 +119,33 @@ export default function Index() {
                 </View>
             </ScrollView>
             <View 
-                className="absolute bottom-0 left-0 right-0 bg-white/95 border-t border-slate-200 pt-2 px-4 shadow-xl"
-                style={{ paddingBottom: insets.bottom > 0 ? insets.bottom : 24 }}
-            >
-                <View className="flex-row justify-around items-center h-14">
-                    <TouchableOpacity activeOpacity={0.7} className="flex-col items-center justify-center gap-1 min-w-[56px]">
-                        <Text className="text-xl">🏠</Text>
-                        <Text className="text-[10px] font-bold text-[#5849c0]">Beranda</Text>
-                    </TouchableOpacity>
-
-                    <TouchableOpacity activeOpacity={0.7} className="flex-col items-center justify-center gap-1 min-w-[56px]">
-                        <Text className="text-xl opacity-60">📖</Text>
-                        <Text className="text-[10px] font-medium text-slate-500">Belajar</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity activeOpacity={0.7} className="flex-col items-center justify-center gap-1 min-w-[56px]">
-                        <Text className="text-xl opacity-60">📝</Text>
-                        <Text className="text-[10px] font-medium text-slate-500">Tugas</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity activeOpacity={0.7} className="flex-col items-center justify-center gap-1 min-w-[56px]">
-                        <Text className="text-xl opacity-60">👤</Text>
-                        <Text className="text-[10px] font-medium text-slate-500">Profil</Text>
-                    </TouchableOpacity>
-                </View>
-            </View>
+                            className="absolute bottom-0 left-0 right-0 bg-white/95 border-t border-slate-200 pt-2 px-4 shadow-xl"
+                            style={{ paddingBottom: insets.bottom > 0 ? insets.bottom : 24 }}
+                        >
+                            <View className="flex-row justify-around items-center h-14">
+                                <TouchableOpacity activeOpacity={0.7} className="flex-col items-center justify-center gap-1 min-w-[56px]"
+                                onPress={() => router.push('/homepage')}
+                                >
+                                    <Text className="text-xl">🏠</Text>
+                                    <Text className="text-[10px] font-bold text-[#5849c0]">Beranda</Text>
+                                </TouchableOpacity>
+            
+                                <TouchableOpacity activeOpacity={0.7} className="flex-col items-center justify-center gap-1 min-w-[56px]"
+                                onPress={() => router.push('/belajar')}
+                                >
+                                    <Text className="text-xl opacity-60">📖</Text>
+                                    <Text className="text-[10px] font-medium text-slate-500">Belajar</Text>
+                                </TouchableOpacity>
+                                <TouchableOpacity activeOpacity={0.7} className="flex-col items-center justify-center gap-1 min-w-[56px]">
+                                    <Text className="text-xl opacity-60">📝</Text>
+                                    <Text className="text-[10px] font-medium text-slate-500">Tugas</Text>
+                                </TouchableOpacity>
+                                <TouchableOpacity activeOpacity={0.7} className="flex-col items-center justify-center gap-1 min-w-[56px]">
+                                    <Text className="text-xl opacity-60">👤</Text>
+                                    <Text className="text-[10px] font-medium text-slate-500">Profil</Text>
+                                </TouchableOpacity>
+                            </View>
+                        </View>
         </SafeAreaView>
     )
 }   
