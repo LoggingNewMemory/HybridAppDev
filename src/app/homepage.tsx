@@ -84,7 +84,7 @@ export default function Index() {
                         </View>
                     </View>
                 </View>
-                <View className="flex-col gap-4">
+                <View className="flex-col gap-4 mt-3">
                     <View className="bg-white rounded-2xl p-4 shadow-sm flex-col gap-3">
                         <View className="flex-row items-start justify-between gap-3">
                             <View className="flex-row items-center gap-3 flex-1">
