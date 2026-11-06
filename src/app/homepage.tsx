@@ -1,3 +1,4 @@
+import { router } from "expo-router";
 import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView, useSafeAreaInsets } from "react-native-safe-area-context";
 
@@ -122,12 +123,16 @@ export default function Index() {
                 style={{ paddingBottom: insets.bottom > 0 ? insets.bottom : 24 }}
             >
                 <View className="flex-row justify-around items-center h-14">
-                    <TouchableOpacity activeOpacity={0.7} className="flex-col items-center justify-center gap-1 min-w-[56px]">
+                    <TouchableOpacity activeOpacity={0.7} className="flex-col items-center justify-center gap-1 min-w-[56px]"
+                    onPress={() => router.push('/homepage')}
+                    >
                         <Text className="text-xl">🏠</Text>
                         <Text className="text-[10px] font-bold text-[#5849c0]">Beranda</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity activeOpacity={0.7} className="flex-col items-center justify-center gap-1 min-w-[56px]">
+                    <TouchableOpacity activeOpacity={0.7} className="flex-col items-center justify-center gap-1 min-w-[56px]"
+                    onPress={() => router.push('/belajar')}
+                    >
                         <Text className="text-xl opacity-60">📖</Text>
                         <Text className="text-[10px] font-medium text-slate-500">Belajar</Text>
                     </TouchableOpacity>
