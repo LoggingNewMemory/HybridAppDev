@@ -127,14 +127,14 @@ export default function Index() {
                                 onPress={() => router.push('/homepage')}
                                 >
                                     <Text className="text-xl">🏠</Text>
-                                    <Text className="text-[10px] font-bold text-[#5849c0]">Beranda</Text>
+                                    <Text className="text-[10px] font-medium text-slate-500">Beranda</Text>
                                 </TouchableOpacity>
             
                                 <TouchableOpacity activeOpacity={0.7} className="flex-col items-center justify-center gap-1 min-w-[56px]"
                                 onPress={() => router.push('/belajar')}
                                 >
                                     <Text className="text-xl opacity-60">📖</Text>
-                                    <Text className="text-[10px] font-medium text-slate-500">Belajar</Text>
+                                    <Text className="text-[10px] font-bold text-[#5849c0]">Belajar</Text>
                                 </TouchableOpacity>
                                 <TouchableOpacity activeOpacity={0.7} className="flex-col items-center justify-center gap-1 min-w-[56px]">
                                     <Text className="text-xl opacity-60">📝</Text>
