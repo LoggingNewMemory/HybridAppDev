@@ -1,10 +1,15 @@
-import { Image, Text, TouchableOpacity, View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
+import { SafeAreaView, useSafeAreaInsets } from "react-native-safe-area-context";
 
 export default function Index() {
+    const insets = useSafeAreaInsets();
     return (
-        <SafeAreaView className="flex-1 bg-[#e4e8fb] flex-col px-5 pt-3 pb-6">
-            <View className="flex flex-col gap-3 pt-2">
+        <SafeAreaView className="flex-1 bg-[#e4e8fb] flex-col px-5 pt-3" edges={['top']}>
+            <ScrollView 
+                contentContainerStyle={{ paddingBottom: 100 }} 
+                showsVerticalScrollIndicator={false}
+                className="flex flex-col gap-3 pt-2"
+            >
                 <View className="flex-row items-center gap-3 min-w-0">
                     <Image
                         source={require('../../Designs/Kanata.png')}
@@ -111,8 +116,11 @@ export default function Index() {
                         </View>
                     </View>
                 </View>
-            </View>
-            <View className="absolute bottom-0 left-0 right-0 bg-white/95 border-t border-slate-200 pt-2 pb-6 px-4 shadow-xl">
+            </ScrollView>
+            <View 
+                className="absolute bottom-0 left-0 right-0 bg-white/95 border-t border-slate-200 pt-2 px-4 shadow-xl"
+                style={{ paddingBottom: insets.bottom > 0 ? insets.bottom : 24 }}
+            >
                 <View className="flex-row justify-around items-center h-14">
                     <TouchableOpacity activeOpacity={0.7} className="flex-col items-center justify-center gap-1 min-w-[56px]">
                         <Text className="text-xl">🏠</Text>
