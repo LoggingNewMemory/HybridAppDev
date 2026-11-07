@@ -4,7 +4,7 @@
     "slug": "HybridAppDev",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "../../Designs/AChan.png",
     "scheme": "hybridappdev",
     "userInterfaceStyle": "automatic",
     "ios": {
