@@ -145,7 +145,8 @@ export default function Index() {
                                     <Text className="text-xl opacity-60">📝</Text>
                                     <Text className="text-[10px] font-medium text-slate-500">Tugas</Text>
                                 </TouchableOpacity>
-                                <TouchableOpacity activeOpacity={0.7} className="flex-col items-center justify-center gap-1 min-w-[56px]">
+                                <TouchableOpacity activeOpacity={0.7} className="flex-col items-center justify-center gap-1 min-w-[56px]"
+                                onPress={() => router.push('/profile')}>
                                     <Text className="text-xl opacity-60">👤</Text>
                                     <Text className="text-[10px] font-medium text-slate-500">Profil</Text>
                                 </TouchableOpacity>
