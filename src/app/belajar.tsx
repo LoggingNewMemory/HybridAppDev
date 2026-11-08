@@ -49,6 +49,7 @@ export default function Index() {
                             </View>
                             <TouchableOpacity
                                 activeOpacity={0.7}
+                                onPress={() => router.push('/detail_materi')}
                                 className="bg-[#5849c0] px-4 py-1.5 rounded-full flex-row items-center gap-1 shadow-sm">
                                 <Text className="text-white text-xs font-semibold">Lanjutkan</Text>
                             </TouchableOpacity>
@@ -81,6 +82,7 @@ export default function Index() {
                             </View>
                             <TouchableOpacity
                                 activeOpacity={0.7}
+                                onPress={() => router.push('/detail_materi')}
                                 className="bg-[#5849c0] px-4 py-1.5 rounded-full flex-row items-center gap-1 shadow-sm">
                                 <Text className="text-white text-xs font-semibold">Lanjutkan</Text>
                             </TouchableOpacity>
@@ -113,6 +115,7 @@ export default function Index() {
                             </View>
                             <TouchableOpacity
                                 activeOpacity={0.7}
+                                onPress={() => router.push('/detail_materi')}
                                 className="bg-[#5849c0] px-4 py-1.5 rounded-full flex-row items-center gap-1 shadow-sm">
                                 <Text className="text-white text-xs font-semibold">Lanjutkan</Text>
                             </TouchableOpacity>
