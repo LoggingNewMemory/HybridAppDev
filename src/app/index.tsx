@@ -1,9 +1,25 @@
 import { router } from "expo-router";
-import { Image, ScrollView, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { useState } from "react";
+import { Alert, Image, ScrollView, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { SafeAreaView, useSafeAreaInsets } from "react-native-safe-area-context";
 
 export default function Index() {
   const insets = useSafeAreaInsets();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleLogin = () => {
+    if (!email.trim() || !password.trim()) {
+      Alert.alert("Email dan Password nggak boleh kosong!");
+      return;
+    }
+    if (!email.includes("@")) {
+      Alert.alert("Emailnya harus pakai '@' dong!");
+      return;
+    }
+    router.push('/homepage');
+  };
+
   return (
     <SafeAreaView className="flex-1 bg-[#e4e8fb] flex-col px-5 pt-3" edges={['top']}>
             <ScrollView 
@@ -85,7 +101,9 @@ export default function Index() {
             Email Address
           </Text>
           <View className="relative">
-                        <TextInput
+              <TextInput
+              value={email}
+              onChangeText={setEmail}
               placeholder="nama@sekolah.sch.id"
               placeholderTextColor="rgba(255, 255, 255, 0.4)"
               keyboardType="email-address"
@@ -99,7 +117,9 @@ export default function Index() {
           Password
         </Text>
         <View className="relative">
-                    <TextInput
+            <TextInput
+            value={password}
+            onChangeText={setPassword}
             placeholder="••••••••"
             placeholderTextColor="rgba(255, 255, 255, 0.4)"
             secureTextEntry={true}
@@ -113,7 +133,7 @@ export default function Index() {
         <TouchableOpacity 
           activeOpacity={0.7}
           className="w-full bg-[#41cddc] py-4 px-6 rounded-xl shadow-md flex-row items-center justify-center gap-2"
-          onPress={() => router.push('/homepage')}
+          onPress={handleLogin}
         >
           <Text className="text-white font-bold text-base tracking-wide">
             Authenticate
