@@ -1044,7 +1044,3 @@ Modif modif gap di       <View className="gap-4 flex-1 flex-col">
 
 
 Aku coba add password tapi aku ga tau keyboard typenya apa
-
-
-
-
