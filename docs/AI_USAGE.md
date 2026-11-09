@@ -2084,7 +2084,30 @@ Import stack:
 
 AH HELL NAHHHHHH
 
-<img width="836" height="1023" alt="image" src="https://github.com/user-attachments/assets/998ef27b-a8a8-4d81-bed1-7c84f1b4e1f0" />
+<img width="784" height="1053" alt="image" src="https://github.com/user-attachments/assets/168b0434-6e72-4323-b92b-168b0b43cd49" />
+<img width="787" height="881" alt="image" src="https://github.com/user-attachments/assets/55dfa73a-a4da-4aa2-8d01-9237e31530e0" />
 
-67. 
-68. 
+67. Anu, aku liat ada  Cukup tampilan dengan validasi input sederhana
+
+Lha berarti harus ada validasi input di login huh?
+
+<img width="789" height="1050" alt="image" src="https://github.com/user-attachments/assets/ec8be079-20c5-4208-9ef8-9501d777c8d0" />
+<img width="829" height="1053" alt="image" src="https://github.com/user-attachments/assets/cb7a934f-911f-42f5-9830-8a9b49d57548" />
+<img width="870" height="1053" alt="image" src="https://github.com/user-attachments/assets/9f6e7fd3-19f8-49a1-b28c-1ddb397ae55a" />
+<img width="838" height="1052" alt="image" src="https://github.com/user-attachments/assets/ebba9910-db79-4a47-b4df-c89f450f19c9" />
+<img width="855" height="905" alt="image" src="https://github.com/user-attachments/assets/f999b6f4-2404-4684-8a9a-ff2227a1f754" />
+
+68. Gini aja ga apa kan?
+
+<img width="843" height="1031" alt="image" src="https://github.com/user-attachments/assets/eecd6252-79b7-4e56-b364-9dd342464476" />
+<img width="839" height="1044" alt="image" src="https://github.com/user-attachments/assets/9a4e42c2-756b-4ada-b19e-767890c66148" />
+<img width="809" height="1048" alt="image" src="https://github.com/user-attachments/assets/f5578426-f35f-43f0-95be-4c163d2441dc" />
+
+69. Gini?
+
+<img width="804" height="1021" alt="image" src="https://github.com/user-attachments/assets/12af8387-fbb4-4339-97da-54a3f5b6b8ab" />
+<img width="781" height="1049" alt="image" src="https://github.com/user-attachments/assets/f719bab0-1691-4ddc-bb41-570a3a536792" />
+
+70. Gini?!
+
+<img width="852" height="916" alt="image" src="https://github.com/user-attachments/assets/f6ca52cb-b49b-4da9-9dfc-9dc25ca85770" />
