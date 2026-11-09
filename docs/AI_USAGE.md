@@ -24,8 +24,8 @@ If Yes, the AI tools used are as follows:
 
 I/We also declare that any use of AI/artificial intelligence for the course mentioned above has been disclosed in this letter.
 
-**Semarang, [Isi Tanggal] November 2026**
-*(Tanda Tangan)*
+**Semarang, 9 November 2026**
+<img width="2032" height="746" alt="Signature" src="https://github.com/user-attachments/assets/8774485a-1d95-4a3d-851d-6701ecf480e2" />
 
 **Albert Wesley Dion Tjakrawinata**
 **2802493090**
