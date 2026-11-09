@@ -18,19 +18,74 @@
 
 ---
 
-## Penjelasan Konsep React Native
-React Native adalah *framework* buatan Meta yang memungkinkan pengembang untuk membangun aplikasi seluler asli (*native*) untuk iOS dan Android menggunakan bahasa JavaScript dan pustaka React. Berbeda dengan aplikasi web berbasis WebView, React Native memanggil *render API native* dari platform (seperti UI View di iOS atau Android), sehingga performa dan tampilannya terasa seperti aplikasi *native* sungguhan. 
+## Penjelasan Konsep React Native (Jawaban LO 1)
+React Native adalah *framework* buatan Meta yang memungkinkan pengembang untuk membangun aplikasi seluler asli (*native*) untuk iOS dan Android menggunakan bahasa JavaScript dan pustaka React. Berbeda dengan aplikasi web berbasis WebView, React Native memanggil *render API native* dari masing-masing OS (seperti UI View di iOS atau Android), sehingga performa dan pengalaman penggunanya terasa seperti aplikasi *native* sungguhan. 
 
 **3 Keunggulan Utama React Native untuk Aplikasi Hybrid:**
 1. **Cross-Platform:** Satu basis kode (JavaScript/TypeScript) dapat dikompilasi dan dijalankan untuk dua platform sekaligus (iOS dan Android), menghemat waktu dan biaya pengembangan secara drastis.
-2. **Fast Refresh / Hot Reloading:** Perubahan pada kode UI dapat langsung terlihat di layar perangkat atau emulator dalam hitungan detik tanpa perlu melakukan proses *rebuild* (kompilasi ulang) aplikasi secara penuh.
-3. **Ekosistem yang Kaya:** Didukung oleh komunitas yang sangat masif serta integrasi mulus dengan *library* Node.js, seperti Expo Router, NativeWind (Tailwind CSS), dan React Navigation.
+2. **Fast Refresh / Hot Reloading:** Perubahan pada UI dapat langsung terlihat di layar perangkat atau emulator dalam hitungan detik tanpa perlu melakukan proses *rebuild* (kompilasi ulang) aplikasi dari awal.
+3. **Ekosistem yang Kaya:** Didukung oleh komunitas masif serta integrasi mulus dengan *library* modern, seperti Expo Router untuk navigasi tingkat lanjut dan NativeWind untuk penulisan *styling* yang efisien.
 
-**Implementasi Komponen, Props, State, dan Navigasi:**
-Dalam proyek ini, konsep fundamental React diaplikasikan sebagai berikut:
-- **Komponen & Props:** UI dipecah menjadi komponen modular (Reusable Component). Contohnya adalah `CourseCard.tsx`. Komponen ini menerima *Props* statis dari luar (seperti `title`, `description`, `progress`, dan `icon`) untuk menampilkan kartu pelajaran yang berbeda-beda secara dinamis tanpa penulisan kode berulang.
-- **State:** Menggunakan *Hooks* `useState` pada halaman Belajar (`belajar.tsx`) untuk menyimpan state filter (`activeFilter`). Ketika tombol kategori ditekan, state berubah, dan UI secara otomatis melakukan *render ulang* untuk hanya menampilkan kartu yang sesuai dengan kategori (Semua, Saintek, Bahasa).
-- **Navigasi:** Menggunakan **Expo Router** (*file-based routing*). Perpindahan antar layar tidak memerlukan konfigurasi *stack* manual yang rumit. Cukup memanggil `router.push('/detail_materi')` pada komponen `TouchableOpacity`, pengguna akan langsung diarahkan ke file rute yang sesuai di dalam folder `app/`.
+**Implementasi Komponen, Props, State, dan Navigasi (Dengan Contoh Kode):**
+Di dalam proyek ini, konsep fundamental React Native diaplikasikan secara langsung pada kode sumber:
+
+**1. Komponen & Props**
+UI dipecah menjadi komponen modular (*Reusable Component*) agar penulisan kode lebih efisien dan terstruktur. Contohnya pada `CourseCard.tsx`, komponen dibangun untuk menerima data eksternal melalui *Props* (seperti `title`, `description`, `progress`, dll) agar kartunya dapat dirender secara dinamis.
+```tsx
+// Cuplikan dari src/components/CourseCard.tsx
+type CourseCardProps = {
+    icon: string;
+    title: string;
+    progress: number;
+    // ... props lainnya
+};
+
+export default function CourseCard({ icon, title, progress }: CourseCardProps) {
+    return (
+        <View className="bg-white rounded-2xl p-4">
+            <Text className="text-base font-bold">{title}</Text>
+            <Text className="text-xs">{progress}%</Text>
+        </View>
+    );
+}
+```
+
+**2. State**
+State digunakan untuk menyimpan data lokal yang berubah berdasarkan interaksi pengguna. Pada halaman Login (`index.tsx`), *Hooks* `useState` digunakan untuk merekam ketikan pengguna pada form otentikasi guna keperluan validasi input sederhana.
+```tsx
+// Cuplikan dari src/app/index.tsx
+import { useState } from "react";
+import { TextInput } from "react-native";
+
+export default function Index() {
+  const [email, setEmail] = useState("");
+
+  return (
+    <TextInput
+      value={email}
+      onChangeText={setEmail}
+      placeholder="nama@sekolah.sch.id"
+    />
+  );
+}
+```
+
+**3. Navigasi**
+Proyek ini mengadopsi sistem *file-based routing* menggunakan **Expo Router**. Perpindahan antar layar dapat dilakukan secara langsung dengan memanggil metode `push` atau `back` pada objek `router` tanpa perlu mendaftarkan konfigurasi *Navigation Stack* yang panjang.
+```tsx
+// Cuplikan dari src/app/index.tsx dan detail_materi.tsx
+import { router } from "expo-router";
+
+// Contoh Navigasi ke halaman utama
+const handleLogin = () => {
+    router.push('/homepage'); 
+};
+
+// Contoh Navigasi kembali (Back)
+<TouchableOpacity onPress={() => router.back()}>
+    <Text>← Kembali</Text>
+</TouchableOpacity>
+```
 
 ---
 
@@ -62,3 +117,4 @@ Dalam proyek ini, konsep fundamental React diaplikasikan sebagai berikut:
 ---
 
 ## Video Demo
+[MASUKKAN LINK YOUTUBE / GOOGLE DRIVE MU DI SINI YAMADA!]
