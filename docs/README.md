@@ -8,6 +8,8 @@
 ## Tema Aplikasi
 **Education** - Platform Edukasi All in One untuk membantu siswa belajar & memantau progress belajar secara interaktif
 
+# Screenshots
+
 ## Cara Menjalankan Aplikasi
 1. Pastikan Node.js dan Git sudah terinstal.
 2. Clone repositori ini: `git clone [LINK_REPO_KAMU]`
