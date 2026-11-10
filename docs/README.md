@@ -117,4 +117,4 @@ const handleLogin = () => {
 ---
 
 ## Video Demo & Presentasi
-https://drive.google.com/file/d/1-goMx9WUbGiG4Mt1NMLvu4yYDF3CBM7C/view?usp=sharing
+https://drive.google.com/drive/folders/1TfZ1Ari2aGrQZaJbU6QXJjjrxlskoFYm?usp=sharing

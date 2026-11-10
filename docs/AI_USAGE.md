@@ -36,7 +36,7 @@ I/We also declare that any use of AI/artificial intelligence for the course ment
 
 Berikut adalah bukti tangkapan layar (screenshot) riwayat percakapan dengan AI (Gemini) yang menunjukkan proses diskusi, pemecahan masalah *error* UI, pembuatan *reusable component*, dan perbaikan navigasi Expo Router sesuai ketentuan *Partial Use*.
 
-1. "@Amane Kanata So I'm tasked to make a react native expo app So from Google stitch > Export .zip > Inspect then convert it manually And using tailwind JS So first, how can I create expo project ? Then reset project ?" 
+- "@Amane Kanata So I'm tasked to make a react native expo app So from Google stitch > Export .zip > Inspect then convert it manually And using tailwind JS So first, how can I create expo project ? Then reset project ?" 
 
 <img width="830" height="890" alt="image" src="https://github.com/user-attachments/assets/eae1583c-3f55-43ae-9b6f-7cd2b1160f6c" />
 <img width="816" height="1039" alt="image" src="https://github.com/user-attachments/assets/7f166191-0be6-4d05-9bc6-52e885a59ba7" />
@@ -44,13 +44,13 @@ Berikut adalah bukti tangkapan layar (screenshot) riwayat percakapan dengan AI (
 <img width="826" height="1030" alt="image" src="https://github.com/user-attachments/assets/fa6a14cd-f4f4-4265-9bae-fafa961adda8" />
 <img width="840" height="1056" alt="image" src="https://github.com/user-attachments/assets/33ad05c8-6325-47d4-92aa-91c3f5a6bf3d" />
 
-2. "I do this npx create-expo-app@latest . And Tailwind supposed already setted up, so next what should I run so I can start it on Android?"
+- "I do this npx create-expo-app@latest . And Tailwind supposed already setted up, so next what should I run so I can start it on Android?"
 
 <img width="875" height="1009" alt="image" src="https://github.com/user-attachments/assets/6800af9d-7e8c-4388-b531-cd6f7f7aaa60" />
 <img width="839" height="1041" alt="image" src="https://github.com/user-attachments/assets/21b3a726-9afe-42e9-8ada-91d72b96eaec" />
 <img width="884" height="887" alt="image" src="https://github.com/user-attachments/assets/fd468c21-f5ed-41b2-a235-c904ec3b8fa0" />
 
-3. "Alright, let's get started What should I do with this? APPARENTLY FOR VERY SOME REASON! Lecturer forbids Converting using AI FOR VERY SOME REASON! So I have to do it manually"
+- "Alright, let's get started What should I do with this? APPARENTLY FOR VERY SOME REASON! Lecturer forbids Converting using AI FOR VERY SOME REASON! So I have to do it manually"
 
 <img width="808" height="1038" alt="image" src="https://github.com/user-attachments/assets/5c103994-d83a-481a-9e9c-1b910c047064" />
 <img width="768" height="1032" alt="image" src="https://github.com/user-attachments/assets/2695bdf2-96d7-49ff-9f4b-b4495003dc65" />
@@ -58,26 +58,26 @@ Berikut adalah bukti tangkapan layar (screenshot) riwayat percakapan dengan AI (
 <img width="808" height="1043" alt="image" src="https://github.com/user-attachments/assets/47182522-aec4-4b81-bd50-d0fd8fe98d27" />
 <img width="794" height="859" alt="image" src="https://github.com/user-attachments/assets/9d1c8f47-117b-4b1e-a85e-979e3f6204da" />
 
-4. "Hold up, give me an example of Swap View for SafeAreaView on the outer container: In your HTML, look at the <body> and the first <div class="...">: <body> has bg-[#e4e8fb] min-h-screen flex flex-col justify-between The inner <div> has w-full max-w-[430px] mx-auto min-h-screen flex flex-col justify-between px-5 pt-8 pb-6 safe-area-inset-top safe-area-inset-bottom In React Native, web classes like min-h-screen, mx-auto, antialiased, selection:..., and safe-area-inset-top don't work the same way as a browser. Instead, you replace that whole outer <body> + <div> combo with a <SafeAreaView> from react-native-safe-area-context using flex-1!"
+- "Hold up, give me an example of Swap View for SafeAreaView on the outer container: In your HTML, look at the <body> and the first <div class="...">: <body> has bg-[#e4e8fb] min-h-screen flex flex-col justify-between The inner <div> has w-full max-w-[430px] mx-auto min-h-screen flex flex-col justify-between px-5 pt-8 pb-6 safe-area-inset-top safe-area-inset-bottom In React Native, web classes like min-h-screen, mx-auto, antialiased, selection:..., and safe-area-inset-top don't work the same way as a browser. Instead, you replace that whole outer <body> + <div> combo with a <SafeAreaView> from react-native-safe-area-context using flex-1!"
 
 <img width="865" height="1024" alt="image" src="https://github.com/user-attachments/assets/cd49e515-9bc6-49ea-a0e2-be1d567b835e" />
 <img width="836" height="1042" alt="image" src="https://github.com/user-attachments/assets/3632ac12-2de6-4e56-8568-57e4633c6ea7" />
 <img width="791" height="1048" alt="image" src="https://github.com/user-attachments/assets/a0a8f6fb-203d-48c7-b075-5bf4520662fe" />
 <img width="797" height="1044" alt="image" src="https://github.com/user-attachments/assets/4dab5904-9f25-4aa6-bbd7-d7037364217d" />
 
-5. "Cleared AGENTS and Claude (Since I don't even use it) And what the hell should I do with this?"
+- "Cleared AGENTS and Claude (Since I don't even use it) And what the hell should I do with this?"
 
 <img width="798" height="1042" alt="image" src="https://github.com/user-attachments/assets/468e1216-9371-4d2c-87d3-50a00d153985" />
 <img width="767" height="1022" alt="image" src="https://github.com/user-attachments/assets/cc2c1dbd-ab3e-4d12-9600-12d7e0ca36f4" />
 <img width="846" height="1043" alt="image" src="https://github.com/user-attachments/assets/82dfaa5c-3498-4c72-9846-63386a703442" />
 <img width="814" height="1055" alt="image" src="https://github.com/user-attachments/assets/65d39062-9638-4d72-8425-b7ac38a68e5c" />
 
-6. "EVERYTHING IS ERROR!!! Hell nah, at this point I want to crucio my lecturer"
+- "EVERYTHING IS ERROR!!! Hell nah, at this point I want to crucio my lecturer"
 <img width="847" height="1041" alt="image" src="https://github.com/user-attachments/assets/0b6c7eef-b92b-473c-bae5-0699aca1c5bd" />
 <img width="838" height="1048" alt="image" src="https://github.com/user-attachments/assets/e59863e3-d74e-4dfb-9461-29ef17f6a123" />
 <img width="771" height="851" alt="image" src="https://github.com/user-attachments/assets/ff9a9cfa-ab3d-4c93-b0e6-84347e8883ad" />
 
-7. "import { View } from "react-native";
+- "import { View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
@@ -110,7 +110,7 @@ Tried to edit this AND ERROR"
 
 <img width="806" height="921" alt="image" src="https://github.com/user-attachments/assets/6823b8d0-def9-48c5-8b25-9a99ff3740ee" />
 
-8. import { Image, View } from "react-native";
+- import { Image, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
@@ -145,7 +145,7 @@ Nice, works, What next?
 <img width="852" height="1064" alt="image" src="https://github.com/user-attachments/assets/2d1c560d-1289-4abd-b3da-73996531cabe" />
 <img width="785" height="844" alt="image" src="https://github.com/user-attachments/assets/ef34c6d6-bff5-41a6-97da-75fec3ee4bd1" />
 
-9. "Uhh... Kanata, I got a problem But nevertheless I think I can do the convertion bit by bit"
+- "Uhh... Kanata, I got a problem But nevertheless I think I can do the convertion bit by bit"
 
 <img width="854" height="1014" alt="image" src="https://github.com/user-attachments/assets/94002f75-8d64-466d-aa3c-136191cc2c06" />
 <img width="795" height="1052" alt="image" src="https://github.com/user-attachments/assets/40c16550-838a-42d2-bb19-8a9a21b1205a" />
@@ -153,13 +153,13 @@ Nice, works, What next?
 <img width="793" height="1052" alt="image" src="https://github.com/user-attachments/assets/b5f306d3-b12e-415d-bf0f-dbee45645888" />
 <img width="782" height="850" alt="image" src="https://github.com/user-attachments/assets/df1af41e-e5a6-4f67-9a58-eb8b27fa58c9" />
 
-10. "Tailwind.config.js is like this"
+- "Tailwind.config.js is like this"
 
 <img width="769" height="1016" alt="image" src="https://github.com/user-attachments/assets/71bd1a8a-1087-4823-b977-9937dd9f59ab" />
 <img width="786" height="1047" alt="image" src="https://github.com/user-attachments/assets/20a7aed1-a3a6-4ecf-b51d-1c4dd8e02184" />
 <img width="773" height="848" alt="image" src="https://github.com/user-attachments/assets/ef35072e-e62a-4b53-85e9-6722ea6c325e" />
 
-11. "Alright, 
+- "Alright, 
 
 At least the code is OK (Even if it's ugly I have to admit it)
 
@@ -219,7 +219,7 @@ export default function Index() {
 <img width="792" height="1042" alt="image" src="https://github.com/user-attachments/assets/32a0bd26-84d3-4187-ac68-8c14a613ead9" />
 <img width="895" height="931" alt="image" src="https://github.com/user-attachments/assets/ade216b6-387a-4675-b68c-46d0a317f7e1" />
 
-12. import { Image, Text, View } from "react-native";
+- import { Image, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
@@ -278,7 +278,7 @@ It's error
 <img width="807" height="1022" alt="image" src="https://github.com/user-attachments/assets/837b232b-1ac4-4bf2-be39-9d5a769f1c6f" />
 <img width="835" height="1048" alt="image" src="https://github.com/user-attachments/assets/6a888d39-cb7c-4b0f-b1d6-80ac7b1af61d" />
 
-13. import { Image, Text, View } from "react-native";
+- import { Image, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
@@ -331,7 +331,7 @@ Aw hell nah it still error!
 <img width="841" height="1055" alt="image" src="https://github.com/user-attachments/assets/1f632c96-50d9-40a1-8513-a87a13abf967" />
 <img width="810" height="847" alt="image" src="https://github.com/user-attachments/assets/6f103a84-6469-43dc-b431-dc4f920addf1" />
 
-14. How to:
+- How to:
 
 npx expo start 
 
@@ -340,7 +340,7 @@ but with tunnel? (Because got error IO Exception: Failed to download remote upda
 <img width="796" height="1009" alt="image" src="https://github.com/user-attachments/assets/cfe480fe-ff86-4970-a48e-769bb9f97eef" />
 <img width="742" height="891" alt="image" src="https://github.com/user-attachments/assets/d3d922b8-1b47-4481-a621-44c3683d061f" />
 
-15. Nice, works. 
+- Nice, works. 
 
 Now this. There's a lot of gap on top, how can I reduce it? 
 
@@ -357,7 +357,7 @@ Suspect is around
 <img width="801" height="961" alt="image" src="https://github.com/user-attachments/assets/fd034e92-eec2-4379-9a9d-948df7786075" />
 <img width="785" height="862" alt="image" src="https://github.com/user-attachments/assets/710b8ea3-0e8f-4962-8987-4fe85df72ab2" />
 
-16. NICE! That works
+- NICE! That works
 
 Now now, we can skip the ONLINE part, 
 
@@ -368,7 +368,7 @@ Let's build the clock widget part
 <img width="814" height="1037" alt="image" src="https://github.com/user-attachments/assets/cf6681b9-0a36-47a0-ba5c-45acb774abb7" />
 <img width="791" height="880" alt="image" src="https://github.com/user-attachments/assets/6baea098-37aa-4189-8320-302cf620d5cf" />
 
-17. {/* <div class="mb-5" data-purpose="clock-and-quote"><div class="bg-white/40 backdrop-blur-sm rounded-2xl p-4 border border-white/60"><div class="flex items-center space-x-3 mb-2"><div class="font-bold tracking-tight text-3xl flex items-baseline"><span class="text-[#ff2222]">1</span><span class="text-slate-900">3</span><span class="text-slate-900 mx-0.5">:</span><span class="text-[#9682f6]">2</span><span class="text-slate-900">1</span></div><div class="flex-1 flex items-center pl-2"><div class="h-[2px] w-full bg-[#9682f6] rounded-full"></div><svg class="w-4 h-4 text-[#9682f6] -ml-1.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path clip-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" fill-rule="evenodd"></path></svg></div></div><blockquote class="text-[13px] text-slate-800 leading-snug font-normal">“Pendidikan adalah senjata paling ampuh yang bisa kamu gunakan untuk mengubah dunia”<cite class="block not-italic text-xs font-semibold text-slate-600 mt-1">~ Nelson Mandela</cite></blockquote></div></div> */}
+- {/* <div class="mb-5" data-purpose="clock-and-quote"><div class="bg-white/40 backdrop-blur-sm rounded-2xl p-4 border border-white/60"><div class="flex items-center space-x-3 mb-2"><div class="font-bold tracking-tight text-3xl flex items-baseline"><span class="text-[#ff2222]">1</span><span class="text-slate-900">3</span><span class="text-slate-900 mx-0.5">:</span><span class="text-[#9682f6]">2</span><span class="text-slate-900">1</span></div><div class="flex-1 flex items-center pl-2"><div class="h-[2px] w-full bg-[#9682f6] rounded-full"></div><svg class="w-4 h-4 text-[#9682f6] -ml-1.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path clip-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" fill-rule="evenodd"></path></svg></div></div><blockquote class="text-[13px] text-slate-800 leading-snug font-normal">“Pendidikan adalah senjata paling ampuh yang bisa kamu gunakan untuk mengubah dunia”<cite class="block not-italic text-xs font-semibold text-slate-600 mt-1">~ Nelson Mandela</cite></blockquote></div></div> */}
 
 AW HELL NAH WHAT THE HELL?! 
 
@@ -379,17 +379,7 @@ AW HELL NAH
 <img width="802" height="1052" alt="image" src="https://github.com/user-attachments/assets/34b9f301-528b-4187-a7ef-1c2ab161047e" />
 <img width="849" height="941" alt="image" src="https://github.com/user-attachments/assets/05ab8c50-523d-4adf-b3cd-dbf756742a8f" />
 
-18. Should I be a witch or wizard?
-
-<img width="796" height="991" alt="image" src="https://github.com/user-attachments/assets/887b411d-426c-4c12-9384-4a6b80f47c9a" />
-<img width="802" height="924" alt="image" src="https://github.com/user-attachments/assets/715a381a-a2a6-48e2-a9ee-2c2d8f9975c0" />
-
-19. Sepertinya aku terlalu jujur :v
-
-<img width="799" height="1051" alt="image" src="https://github.com/user-attachments/assets/676ac13c-3cce-4811-aa03-2f111f84328a" />
-<img width="769" height="907" alt="image" src="https://github.com/user-attachments/assets/c8edb63b-04b8-4b86-b3e9-d537506e1105" />
-
-20. Alright, let's get back to work
+- Alright, let's get back to work
 
 {/* Clock and Quote
       Original: 
@@ -454,37 +444,7 @@ I think I need guide about span (And sure my div is wrong I suppose)
 <img width="772" height="1056" alt="image" src="https://github.com/user-attachments/assets/17ac6cdd-80c8-4430-8569-38dad19e60c6" />
 <img width="810" height="936" alt="image" src="https://github.com/user-attachments/assets/abb03300-4f5b-4748-b9ec-b9d7b82b28c1" />
 
-21. You know... 
-
-Karena aku diajar oleh Malaikat maka hendaknya aku juga berperilaku selayaknya Malaikat 
-
-Hendaknya aku memaafkan orang yang bersalah dan menyusahkan diriku. Sebab kutahu segala sesuatu adalah sebab akibat dan segala perbuatan memiliki akibat
-
-Aku percaya akan apa yang ditanam maka itu yang dituai. Apa yang kau beri adalah apa yang terima.
-
-Hendaknya siapa yang memberikan kesusahan maka akan menerima kesusahan yang berkali kali lipat dan hendaknya yang memberikan kemudahan diberikan kemudahan yang berkali kali lipat 
-
-Sebab aku percaya akan Alkitab dan ajaran Tuhan dan aku percaya akan Hukuman Tuhan yang jauh lebih sadis daripada hukuman yang bisa dipikirkan oleh manusia. Sebab sesungguhnya hidup mati adalah ditangan Tuhan dan segala sesuatu adalah terjadi sesuai kehendaknya 
-
-Terpujilah Tuhan Yesus Kristus. Amin
-
-<img width="789" height="867" alt="image" src="https://github.com/user-attachments/assets/a24f3d8c-bf77-4143-8847-6a73bfb0eb47" />
-
-22. Hendaknya aku memaafkan orang yang bersalah dan serahkan saja urusannya kepada Tuhan
-
-Karena apakah diriku ini sebab aku hanyalah debu dan tanah? Masakan aku akan memukuli sesama debu dan tanah yang lebih tua daripada aku? 
-
-Sebab sungguh baik untuk memaafkan dan membiarkan saja, sebab nanti juga dia yang kepikiran sendiri
-
-Cepat atau lambat, atau ternyata umurnya tidak sampai
-
-Namun apapun itu hendaknya aku lebih dulu memaafkan.
-
-Aku hanyalah manusia biasa, dia juga manusia biasa. Tahta dan kedudukanku juga sama seperti dia jadi untuk apa aku harus berpusing kepala seperti itu?
-
-<img width="841" height="831" alt="image" src="https://github.com/user-attachments/assets/0252c97a-cb03-4b41-b571-b14fe8ed56b8" />
-
-23. import { Image, Text, View } from "react-native";
+- import { Image, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
@@ -615,7 +575,7 @@ Aw hell nahhhh error cuy
 <img width="863" height="1064" alt="image" src="https://github.com/user-attachments/assets/e863efbe-f26b-41b5-8dcf-abe0bea978a6" />
 <img width="870" height="864" alt="image" src="https://github.com/user-attachments/assets/46bb62f6-48c4-45a4-9d56-2d30e1a390e9" />
 
-24. import { Image, Text, View } from "react-native";
+- import { Image, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
@@ -742,7 +702,7 @@ Akhirnya bjir aelah perkara ga nutup view doang
 <img width="808" height="972" alt="image" src="https://github.com/user-attachments/assets/46543e9a-9f27-4b92-ab50-92a78859eb87" />
 <img width="834" height="888" alt="image" src="https://github.com/user-attachments/assets/d9040ed3-0268-4fba-9100-295542750abe" />
 
-25. Anu, ini kenapa blocknya jadi paling kebawah ya?
+- Anu, ini kenapa blocknya jadi paling kebawah ya?
 
 Jadi ini literally kebawah banget ya? 
 
@@ -754,7 +714,7 @@ Dan harusnya blocknya  jadi kek gini
 <img width="816" height="1055" alt="image" src="https://github.com/user-attachments/assets/7d1b71a7-71b9-431f-9f4a-336e1ff92579" />
 <img width="827" height="1039" alt="image" src="https://github.com/user-attachments/assets/5df79c9c-eccf-4fad-ab10-ea57fbaf4fcd" />
 
-26. Gokilll (Aku fix sendiri bagian -> nya, dan thank you buat catetan classnya Kanata)
+- Gokilll (Aku fix sendiri bagian -> nya, dan thank you buat catetan classnya Kanata)
 
 Sekarang jadi gini 
 
@@ -913,7 +873,7 @@ Ini sudah bisa munculin textnya (Aku bikin sendiri dan hehey not bad) Cuma aku g
 <img width="790" height="1046" alt="image" src="https://github.com/user-attachments/assets/b3253514-0d6f-4f97-998d-7b79bb9c843b" />
 <img width="825" height="896" alt="image" src="https://github.com/user-attachments/assets/557e1fa2-2557-4b5d-bf4c-aa0680a85ab6" />
 
-27.     <View className="w-full bg-[#8370ed] rounded-3xl shadow-xl relative overflow-hidden flex-1 flex-col justify-between mb-5 p-7">
+- <View className="w-full bg-[#8370ed] rounded-3xl shadow-xl relative overflow-hidden flex-1 flex-col justify-between mb-5 p-7">
 
       {/* <div class="flex items-center justify-between mb-6">
       <h2 class="text-xl font-semibold tracking-tight text-white/95">Or With Email</h2>
@@ -946,7 +906,7 @@ Bentar, ada yang kelupaan aku.
 <img width="780" height="992" alt="image" src="https://github.com/user-attachments/assets/dc33434c-7eb6-4643-9386-bf3f5c82ece2" />
 <img width="761" height="925" alt="image" src="https://github.com/user-attachments/assets/5c7ee5c5-b70b-429b-a4b9-e7b09924d819" />
 
-27.         {/* <form class="space-y-4 flex-1 flex flex-col justify-center" data-purpose="login-form" onsubmit="event.preventDefault();"> */}
+- {/* <form class="space-y-4 flex-1 flex flex-col justify-center" data-purpose="login-form" onsubmit="event.preventDefault();"> */}
 
         <form className="space-y-4 flex-1 flex flex-col justify-center" data-purpose="login-form" >
         </form>
@@ -959,8 +919,7 @@ Coba bikin Form sendiri malah error aowkoawkaowkwa
 <img width="807" height="1056" alt="image" src="https://github.com/user-attachments/assets/c0c636cd-d083-400f-b1d6-cc9e3e624cc8" />
 <img width="877" height="1042" alt="image" src="https://github.com/user-attachments/assets/262d099d-df4b-48c2-b01a-70fd3871e3cf" />
 
-28. 
-      <View className="gap-4 flex-1 flex-col justify-center">
+- <View className="gap-4 flex-1 flex-col justify-center">
         {/* <div class="space-y-2">
         <label class="block text-white/90 text-xs font-semibold uppercase tracking-wider pl-0.5" for="email">
           Email Address
@@ -981,7 +940,7 @@ Gini bener ga ya? (Mau coba masukin Emailnya)
 <img width="774" height="1029" alt="image" src="https://github.com/user-attachments/assets/bddee52f-2b68-4ba1-ae22-21c9dc48be21" />
 <img width="796" height="838" alt="image" src="https://github.com/user-attachments/assets/cf9aea8e-155d-4c63-b35f-5ac9a2ed4dd0" />
 
-29.       <View className="gap-4 flex-1 flex-col">
+- <View className="gap-4 flex-1 flex-col">
         {/* <div class="space-y-2">
         <label class="block text-white/90 text-xs font-semibold uppercase tracking-wider pl-0.5" for="email">
           Email Address
@@ -1021,7 +980,7 @@ Modif modif gap di       <View className="gap-4 flex-1 flex-col">
  <img width="844" height="1030" alt="image" src="https://github.com/user-attachments/assets/fefee70a-2fb0-4137-a8a3-b37697e4a756" />
 <img width="790" height="917" alt="image" src="https://github.com/user-attachments/assets/5e2a83df-89e0-41f6-9cdd-42738eb1ad4b" />
 
-30.   {/* <div class="space-y-2 pt-1">
+- {/* <div class="space-y-2 pt-1">
         <label class="block text-white/90 text-xs font-semibold uppercase tracking-wider pl-0.5" for="password">
           Password
         </label>
@@ -1048,7 +1007,7 @@ Aku coba add password tapi aku ga tau keyboard typenya apa
 <img width="856" height="1019" alt="image" src="https://github.com/user-attachments/assets/63299ba8-64d8-43a2-a9d5-cf26e8f87034" />
 <img width="890" height="815" alt="image" src="https://github.com/user-attachments/assets/06036b2b-cca8-46d3-9636-1a2a053cdd7d" />
 
-31. <div class="pt-2 space-y-4">
+- <div class="pt-2 space-y-4">
     <!-- CAPTCHA Box -->
     
     <!-- Primary Submit Button -->
@@ -1067,7 +1026,7 @@ Aku mau coba bikin authenticate button cuma ya... How? Aku ga pernah bikin butto
 <img width="784" height="1051" alt="image" src="https://github.com/user-attachments/assets/4331ec4d-ba8f-4be8-a6a2-09cb106d6a89" />
 <img width="801" height="853" alt="image" src="https://github.com/user-attachments/assets/3f3e27a5-7c51-4e41-ae83-0cfce1ac61c1" />
 
-32. import { Image, Text, TextInput, TouchableOpacity, View } from "react-native";
+- import { Image, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
@@ -1281,7 +1240,7 @@ Aduh ada error di         <View ClassName="pt-2 gap-4">
 <img width="768" height="1047" alt="image" src="https://github.com/user-attachments/assets/f2e3fb91-6846-428b-8488-616aae3e8052" />
 <img width="862" height="908" alt="image" src="https://github.com/user-attachments/assets/5354959c-cad9-4a8f-84ec-1b0d9e43f596" />
 
-33. Adeh, ada error setelah upgrade to SDK 28 
+- Adeh, ada error setelah upgrade to SDK 28 
 
 native.js"
   1 | // Based on https://github.com/facebook/react-native/blob/9ab95dd2b5746e8323ad1d65591d5a4ec7718790/packages/re
@@ -1322,7 +1281,7 @@ Dan development Server returned response error code: 500
 <img width="796" height="985" alt="image" src="https://github.com/user-attachments/assets/ad138102-5b76-4f29-b9e0-892e28780d11" />
 <img width="837" height="925" alt="image" src="https://github.com/user-attachments/assets/0d922ece-beb5-4109-a6f3-69fe7407c523" />
 
-34. ❯ npx expo install --fix
+- ❯ npx expo install --fix
 npm notice run hybridappdev@1.0.0 npx
 npm notice run 'expo' install --fix
 env: load .env
@@ -1399,7 +1358,7 @@ Ah kurang ajar
 <img width="838" height="1032" alt="image" src="https://github.com/user-attachments/assets/7a347548-7bdd-4ab9-8d5a-0e93d8ff0df0" />
 <img width="766" height="843" alt="image" src="https://github.com/user-attachments/assets/57737798-87bf-423b-9238-86b0fb0bd07b" />
 
-35. DONE! THANK YOU! 
+- DONE! THANK YOU! 
 
 Aku pake npx expo start -c --tunnel ngrok (CMD specialist move) 
 
@@ -1411,7 +1370,7 @@ Mari coba bikin sendiri aja dulu
 
 <img width="774" height="687" alt="image" src="https://github.com/user-attachments/assets/4344a72b-ec10-493a-b290-6798123e3c58" />
 
-36. <!DOCTYPE html><html lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_tab" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+- <!DOCTYPE html><html lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_tab" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary": "#00696c", "surface-container-highest": "#e3e0f8", "error-container": "#ffdad6", "secondary-container": "#6af3f8", "inverse-on-surface": "#f2efff", "secondary-fixed-dim": "#4bdadf", "on-tertiary-fixed": "#180065", "inverse-primary": "#c7bfff", "primary": "#5849c0", "background": "#fcf8ff", "primary-fixed": "#e4dfff", "outline-variant": "#c9c4d5", "surface-container-lowest": "#ffffff", "on-surface": "#1a1a2b", "on-surface-variant": "#474553", "on-secondary": "#ffffff", "on-error-container": "#93000a", "surface-container-high": "#e8e6fe", "on-tertiary-container": "#fffbff", "surface": "#fcf8ff", "tertiary-fixed": "#e4dfff", "outline": "#787584", "surface-tint": "#5b4cc2", "on-tertiary-fixed-variant": "#44369c", "on-primary-container": "#fffbff", "on-primary": "#ffffff", "tertiary": "#594db3", "primary-container": "#7163db", "on-secondary-fixed-variant": "#004f52", "on-tertiary": "#ffffff", "surface-variant": "#e3e0f8", "surface-bright": "#fcf8ff", "surface-dim": "#dad8ef", "surface-container": "#efecff", "on-secondary-fixed": "#002021", "inverse-surface": "#2f2f41", "on-background": "#1a1a2b", "secondary-fixed": "#6ef6fb", "on-error": "#ffffff", "error": "#ba1a1a", "tertiary-container": "#7266cd", "tertiary-fixed-dim": "#c7bfff", "on-secondary-container": "#006e71", "on-primary-fixed-variant": "#4331a9", "primary-fixed-dim": "#c7bfff", "surface-container-low": "#f5f2ff", "on-primary-fixed": "#170065" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "gutter": "1.25rem", "margin": "2.5rem", "space-xs": "0.25rem", "gutter-mobile": "0.75rem", "space-lg": "1.5rem", "space-xl": "2.25rem", "margin-mobile": "1.25rem", "space-md": "1rem" }, "fontFamily": { "label-lg": ["Be Vietnam Pro"], "display-lg-mobile": ["Plus Jakarta Sans"], "label-md": ["Be Vietnam Pro"], "body-lg": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "label-sm": ["Be Vietnam Pro"], "title-md": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"] }, "fontSize": { "label-lg": ["15px", { "lineHeight": "20px", "fontWeight": "600" }], "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "800" }], "label-md": ["13px", { "lineHeight": "18px", "fontWeight": "500" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "36px", "fontWeight": "700" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }], "title-md": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-md": ["22px", { "lineHeight": "30px", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="A-Chan Mascot Logo" class="h-8 w-auto object-contain flex-shrink-0 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVZVg2Egi8LHmAH5qatdNWIdk5nDEJ0_Hkwjs6nRVCBditpk_sdfHu00slqfAA5P0p-cIDprTmLkJwM6taD1gq5IEoffio8Iw7q_lZnt2v98tUqa9DSqdSq7xJrlzdgmhCCTWaqPA2dc6nvFJPPaD0LGxGh1nbhbMh6wouWE4h67y6-O8xbQbXuydRlOJ8o8ajr6pkI0uFgiOEF7iZgP4Jl6BfPJIOmtUY6Q9YLbmocZrDcSN20IjT"><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-title-md text-title-md text-primary font-bold leading-none truncate">A-Chan</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate hidden sm:inline">• Beranda</span></div><span class="font-label-sm text-label-sm text-on-surface-variant truncate">All In One Education Platform</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface"><div class="flex flex-col w-full px-margin-mobile space-y-space-lg">
 <!-- 1. Student Greeting & Daily Motivation Card -->
 <section class="flex flex-col gap-space-sm pt-space-xs">
@@ -1590,14 +1549,14 @@ AELAH KUSO! ERROR COEQ!!!
 <img width="791" height="989" alt="image" src="https://github.com/user-attachments/assets/83e2a59b-7ed2-4324-ae6e-a7ff51d1dfb3" />
 <img width="836" height="880" alt="image" src="https://github.com/user-attachments/assets/54f9bea5-5f79-4fc1-8194-d9bcc374c683" />
 
-37. Oh iya ding, ga diclose ya error (Yap, gw editin 1 per 1 jir)
+- Oh iya ding, ga diclose ya error (Yap, gw editin 1 per 1 jir)
 
 Eh, ngomong ngomong kalo aku mau liat homepage.tsx di expo gimana ya? Bukannya kalo di scan QRnya itu menujutnya login?
 
 <img width="794" height="994" alt="image" src="https://github.com/user-attachments/assets/650b4b84-ada0-4214-a644-aa093de5454a" />
 <img width="771" height="882" alt="image" src="https://github.com/user-attachments/assets/118afccf-64e0-4d0b-8277-a3e6b4b229bd" />
 
-38.                             {/* <p class="font-body-md text-body-md text-on-surface-variant">Yuk lanjutkan progres belajarmu hari ini!</p> */}
+- {/* <p class="font-body-md text-body-md text-on-surface-variant">Yuk lanjutkan progres belajarmu hari ini!</p> */}
                             <Text className="font-body-md text-body-md text-on-surface-variant">
                                 Yuk lanjutkan progres belajarmu hari ini!
                             </Text>
@@ -1611,7 +1570,7 @@ malah di sebelah Halo, Mas Kakang!
 <img width="828" height="983" alt="image" src="https://github.com/user-attachments/assets/b06e8106-2973-41de-9127-aae4569d3edf" />
 <img width="846" height="893" alt="image" src="https://github.com/user-attachments/assets/b5c11c0a-a84f-4848-a8ee-a000b5813ccc" />
 
-39. <!-- Motivation Banner Box with Mandela Quote & Mascot Cue -->
+- <!-- Motivation Banner Box with Mandela Quote & Mascot Cue -->
 <div class="relative overflow-hidden rounded-2xl p-space-lg text-on-primary shadow-[0_8px_24px_rgba(88,73,192,0.22)]" style="background-color: #6c5ce7;">
   <!-- Subtle background glow/ambient elements -->
   
@@ -1642,7 +1601,7 @@ Nice sih, sekarang gimana ya porting ini? Ini sih kaya kemaren nda sih?
 <img width="893" height="1012" alt="image" src="https://github.com/user-attachments/assets/c669129f-6276-4def-9928-6c325035aa71" />
 <img width="912" height="909" alt="image" src="https://github.com/user-attachments/assets/46052419-961b-4068-8fe8-151fd09c4f29" />
 
-40. Padahal aku tulis Mas Kakang gegara meme Kakangku =w= 
+- Padahal aku tulis Mas Kakang gegara meme Kakangku =w= 
 
 Eh anyway, it's done
 
@@ -1671,7 +1630,7 @@ Dan anywho aku berhasil port ini
 <img width="919" height="965" alt="image" src="https://github.com/user-attachments/assets/fe50f062-d7c2-40e8-a97e-25b85c890490" />
 <img width="800" height="1050" alt="image" src="https://github.com/user-attachments/assets/fe6f9508-7377-4bc6-8e18-2d1d63c25a28" />
 
-41. import { Text, View } from "react-native";
+- import { Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
@@ -1784,7 +1743,7 @@ Current progress on port:
 <img width="849" height="1048" alt="image" src="https://github.com/user-attachments/assets/4b76d4ff-6694-468e-8249-a4338b09403e" />
 <img width="897" height="881" alt="image" src="https://github.com/user-attachments/assets/0cc60d6f-3c61-447d-915f-5c7708bff972" />
 
-42. <div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+- <div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
 
 </div>
 <div class="flex items-center justify-between pt-space-xs">
@@ -1840,7 +1799,7 @@ Lanjutinnya gimana?
 <img width="797" height="994" alt="image" src="https://github.com/user-attachments/assets/a0ab9cd3-c503-4417-b718-c86f91d10f0f" />
 <img width="837" height="1034" alt="image" src="https://github.com/user-attachments/assets/6f4bbdf6-fecc-4c9e-ad9f-e3fda7fad28b" />
 
-43.  <View className="w-full bg-slate-200 h-2 rounded-full overflow-hidden mt-1">
+- <View className="w-full bg-slate-200 h-2 rounded-full overflow-hidden mt-1">
                             <View className="bg-[#5849c0] h-full rounded-full" style={{ width: '65%' }} />
                         </View>
                         <View className="flex-row items-center justify-between pt-1"></View>
@@ -1860,7 +1819,7 @@ Aku melakukan kesalahan -_ di bagian TouchableOpacity karena lanjutkan itu malah
 <img width="821" height="1003" alt="image" src="https://github.com/user-attachments/assets/0ce4cac4-fffb-4ef9-abb0-ad25beb98e76" />
 <img width="807" height="878" alt="image" src="https://github.com/user-attachments/assets/002bbe79-31e4-4fb4-900a-5e893d828e41" />
 
-44.                         {/* <div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+- {/* <div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
                     </div>
                     <div class="flex items-center justify-between pt-space-xs">
                     <div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-[16px]">schedule</span><span class="font-label-sm text-label-sm">Sisa 7 materi</span></div>
@@ -1894,14 +1853,14 @@ Penginaan besar buat aku yang biasanya lebih daripada itu, sialan emang
 
 <img width="809" height="832" alt="image" src="https://github.com/user-attachments/assets/153b8966-f993-44ff-af38-3860d2ca216e" />
 
-45. TCH! Aku coba duplicate malah error! Bagaimana diriku ini?! 
+- TCH! Aku coba duplicate malah error! Bagaimana diriku ini?! 
 
 Agh!
 
 <img width="765" height="1034" alt="image" src="https://github.com/user-attachments/assets/246a5944-6893-42df-8a5f-c1fe40d70ef3" />
 <img width="809" height="888" alt="image" src="https://github.com/user-attachments/assets/f02732ec-2fb2-4a5b-8d79-54cc004ee3b6" />
 
-46. Aku mau nambah gambar Kanata & A-Chan
+- Aku mau nambah gambar Kanata & A-Chan
 
 Jadi di Index, aku mau gambar A-Chan (Menggantikan 
 
@@ -1922,7 +1881,7 @@ Gimana ya?
 <img width="783" height="1040" alt="image" src="https://github.com/user-attachments/assets/478b267c-3290-4a5d-ba6a-ec0fb00320d0" />
 <img width="796" height="1056" alt="image" src="https://github.com/user-attachments/assets/5d3a7f0d-a1ae-4ed7-a84c-9850f479b7b0" />
 
-47. Very Good! jadi gini nih
+- Very Good! jadi gini nih
 
 Sekarang aku mau implement yang bagian bawah (Navigation page) 
 
@@ -1931,7 +1890,7 @@ Jadi beranda, belajar, tugas, profil gitu
 <img width="802" height="1045" alt="image" src="https://github.com/user-attachments/assets/7d21830d-2066-4e70-a440-17517e4b55fb" />
 <img width="885" height="1049" alt="image" src="https://github.com/user-attachments/assets/84aff1f0-d075-4d0a-b958-bad8062f644c" />
 
-48. Good, Tapi gini.
+- Good, Tapi gini.
 
 Gimana cara bikin supaya webnya bisa menghindari system navigation (Kalo di kotlin ada APInya sih, tapi ini kan expo native =w=)
 
@@ -1939,41 +1898,41 @@ Gimana cara bikin supaya webnya bisa menghindari system navigation (Kalo di kotl
 <img width="834" height="1057" alt="image" src="https://github.com/user-attachments/assets/0e175e88-138b-489d-a06d-ccc50a27af44" />
 <img width="839" height="868" alt="image" src="https://github.com/user-attachments/assets/f2a6693a-783a-4a90-a9e1-fafb2eb2c1fb" />
 
-49. ADUHHH ERROR
+- ADUHHH ERROR
 
 <img width="863" height="1012" alt="image" src="https://github.com/user-attachments/assets/75044f5d-849f-40d9-99b2-7a9ec5668a8d" />
 <img width="835" height="1059" alt="image" src="https://github.com/user-attachments/assets/8e5dd814-9b33-4777-84de-18f222456920" />
 
-50. Keknya ada yang kurang deh?
+- Keknya ada yang kurang deh?
 
 <img width="831" height="1018" alt="image" src="https://github.com/user-attachments/assets/645fab9d-c48e-4f73-8520-f7ff8d0a3f07" />
 <img width="847" height="1033" alt="image" src="https://github.com/user-attachments/assets/8672ed5a-de72-4d49-af8c-fd917a0872bd" />
 <img width="852" height="1026" alt="image" src="https://github.com/user-attachments/assets/370c12ef-396b-4ab1-914a-f3ef3cffb625" />
 
-51. Aku coba update index.tsx sendiri dan... Eh malah error hehe =w=
+- Aku coba update index.tsx sendiri dan... Eh malah error hehe =w=
 
 <img width="797" height="967" alt="image" src="https://github.com/user-attachments/assets/9fae507b-2d5e-4704-85be-ba8fec21b99e" />
 <img width="805" height="1037" alt="image" src="https://github.com/user-attachments/assets/d2fdf911-aa14-4b8b-b0b2-d2292fea6c9b" />
 
-52. NOOOOO MERAH SEMUAAAAA AAAA
+- NOOOOO MERAH SEMUAAAAA AAAA
 
 <img width="771" height="1023" alt="image" src="https://github.com/user-attachments/assets/8425b2b8-a9ac-457a-8931-fcec943be408" />
 <img width="825" height="914" alt="image" src="https://github.com/user-attachments/assets/9b7b3afc-2373-4d84-ad65-2dc851a42588" />
 
-53. Aku jujur aja.
+- Aku jujur aja.
 
 Aku salah edit file X_X
 
 <img width="796" height="1037" alt="image" src="https://github.com/user-attachments/assets/429c0397-e132-4e60-9fed-49ec0db498b2" />
 <img width="800" height="943" alt="image" src="https://github.com/user-attachments/assets/1cd17303-7003-40ed-9872-056715cd4fa1" />
 
-54. HOREEEE DONEE
+- HOREEEE DONEE
 
 THANK YOUU
 
 <img width="943" height="1044" alt="image" src="https://github.com/user-attachments/assets/f56f8dbf-962a-45f9-b68f-30fb22d52768" />
 
-55. Hey hey! Look what I have done! 
+- Hey hey! Look what I have done! 
 
 Aku berhasil conversi ini Untuk yang belajar sendiri! 
 
@@ -1989,7 +1948,7 @@ AOWKOAWKOWAKOWAKOWAK GOKIL
 <img width="831" height="1049" alt="image" src="https://github.com/user-attachments/assets/bf2e5b0f-ef19-4a81-9dca-3c090f4b013d" />
 <img width="881" height="905" alt="image" src="https://github.com/user-attachments/assets/a31c389f-70e1-4587-b634-3a1a9a03fd60" />
 
-56. Bentar X_X
+- Bentar X_X
 
 Kok ini kacau sekali eh?
 
@@ -1998,7 +1957,7 @@ Kok ini kacau sekali eh?
 <img width="838" height="1058" alt="image" src="https://github.com/user-attachments/assets/659b7517-6134-4de5-b4b7-808e896acb8c" />
 <img width="803" height="937" alt="image" src="https://github.com/user-attachments/assets/27909d19-03b6-4781-9fb3-7bccf96814f2" />
 
-57. GILA MASIH ERROR!!!
+- GILA MASIH ERROR!!!
 
 <img width="818" height="1048" alt="image" src="https://github.com/user-attachments/assets/900966e2-848b-4d65-8b99-fe23fb39d451" />
 <img width="837" height="1052" alt="image" src="https://github.com/user-attachments/assets/8adf234c-6ba7-45d9-b81c-816e02df024f" />
@@ -2007,12 +1966,12 @@ Kok ini kacau sekali eh?
 <img width="810" height="1055" alt="image" src="https://github.com/user-attachments/assets/eba2908b-7989-45a9-9d3e-37eec7efc891" />
 <img width="825" height="1054" alt="image" src="https://github.com/user-attachments/assets/baa35c7c-33aa-4d11-8a14-8605ededc93e" />
 
-58. Errornya sih Couldn't find a LinkingContext context
+- Errornya sih Couldn't find a LinkingContext context
 
 <img width="776" height="1030" alt="image" src="https://github.com/user-attachments/assets/7af03d0a-1c90-42b0-8a37-ccc7d5b101fd" />
 <img width="752" height="1035" alt="image" src="https://github.com/user-attachments/assets/db1e7cd7-8c9c-49b5-bdcc-505c5abaf2ed" />
 
-59. HALAH NGAMUK AKU, AKHIRNYA TAK HAPUS AJA ITU, BIKIN PUSING AJA!
+- HALAH NGAMUK AKU, AKHIRNYA TAK HAPUS AJA ITU, BIKIN PUSING AJA!
 
 Lagian ga minta sih, hihihi
 
@@ -2021,7 +1980,7 @@ Ngomong ngomong ini soal dari dosenku -_
 <img width="781" height="1034" alt="image" src="https://github.com/user-attachments/assets/ba91887a-fe0f-4d60-a4d5-e0ed3b37e69e" />
 <img width="802" height="824" alt="image" src="https://github.com/user-attachments/assets/2369e36b-4e1f-487d-a2ba-543202c0d4ed" />
 
-60. Jadi jika tombol "Lanjutkan" di belajar ditekan maka menuju detail_materi...
+- Jadi jika tombol "Lanjutkan" di belajar ditekan maka menuju detail_materi...
 
 But damn, page detail materi beda banget
 
@@ -2031,7 +1990,7 @@ But damn, page detail materi beda banget
 <img width="800" height="1049" alt="image" src="https://github.com/user-attachments/assets/b7931f29-7d40-4cb9-a988-b0c1f4b66217" />
 <img width="793" height="854" alt="image" src="https://github.com/user-attachments/assets/af7b5172-376c-4eac-b838-929d8edf6103" />
 
-61. EZ, 14 menit jadi all. Sekarang tinggal profile 
+- EZ, 14 menit jadi all. Sekarang tinggal profile 
 
 Aku udah route tombol profile ke profile buat belajar & homepage 
 
@@ -2042,11 +2001,11 @@ Sekarang tinggal profilenya
 <img width="822" height="1053" alt="image" src="https://github.com/user-attachments/assets/d7ff5c5d-12a9-4ffc-82e1-7a996af55a88" />
 <img width="812" height="938" alt="image" src="https://github.com/user-attachments/assets/fa41b4ad-0e41-46bd-8956-b966b3dad0a4" />
 
-62. Gini gimana?
+- Gini gimana?
 
 <img width="808" height="777" alt="image" src="https://github.com/user-attachments/assets/4e7d98c8-91b6-4d45-8651-13fef1e5ff8c" />
 
-63. Alright, X_X dengan ini semua emangnya gimana caranya? Jujur aku kurang mudeng konsepnya
+- Alright, X_X dengan ini semua emangnya gimana caranya? Jujur aku kurang mudeng konsepnya
 
 <img width="779" height="1046" alt="image" src="https://github.com/user-attachments/assets/5ac5c271-e038-42df-9044-bbb8383ed643" />
 <img width="811" height="1044" alt="image" src="https://github.com/user-attachments/assets/d2985108-544a-4916-a66e-f30cf95b2799" />
@@ -2055,18 +2014,18 @@ Sekarang tinggal profilenya
 <img width="814" height="1041" alt="image" src="https://github.com/user-attachments/assets/d6b23e74-4b16-4647-9097-b404ef9782cd" />
 <img width="775" height="1066" alt="image" src="https://github.com/user-attachments/assets/18b923a8-7285-4f27-b319-e49f22f367eb" />
 
-64. bentar _- keknya something wrong
+- bentar _- keknya something wrong
 
 <img width="796" height="1034" alt="image" src="https://github.com/user-attachments/assets/8de34d75-27e6-49e5-829e-690ba75e5d0a" />
 <img width="799" height="1046" alt="image" src="https://github.com/user-attachments/assets/401ab7ba-f105-46ca-85e5-10bf2056cab2" />
 <img width="839" height="915" alt="image" src="https://github.com/user-attachments/assets/8325c453-fe4c-47be-8653-f9a7c1eb5eb9" />
 
-65. Kok masih error ya? +_+
+- Kok masih error ya? +_+
 
 <img width="813" height="973" alt="image" src="https://github.com/user-attachments/assets/2a441b2c-b156-446d-b8ff-a5f7be228ea6" />
 <img width="791" height="1051" alt="image" src="https://github.com/user-attachments/assets/4c5fbe14-558a-488d-8251-a4ddb531986b" />
 
-66. Android Bundling failed 4695ms node_modules/expo-router/entry.js (1765 modules)
+- Android Bundling failed 4695ms node_modules/expo-router/entry.js (1765 modules)
 Unable to resolve "../../components/CourseCard" from "src/app/homepage.tsx"
   2 | import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
   3 | import { SafeAreaView, useSafeAreaInsets } from "react-native-safe-area-context";
@@ -2087,7 +2046,7 @@ AH HELL NAHHHHHH
 <img width="784" height="1053" alt="image" src="https://github.com/user-attachments/assets/168b0434-6e72-4323-b92b-168b0b43cd49" />
 <img width="787" height="881" alt="image" src="https://github.com/user-attachments/assets/55dfa73a-a4da-4aa2-8d01-9237e31530e0" />
 
-67. Anu, aku liat ada  Cukup tampilan dengan validasi input sederhana
+- Anu, aku liat ada  Cukup tampilan dengan validasi input sederhana
 
 Lha berarti harus ada validasi input di login huh?
 
@@ -2097,17 +2056,17 @@ Lha berarti harus ada validasi input di login huh?
 <img width="838" height="1052" alt="image" src="https://github.com/user-attachments/assets/ebba9910-db79-4a47-b4df-c89f450f19c9" />
 <img width="855" height="905" alt="image" src="https://github.com/user-attachments/assets/f999b6f4-2404-4684-8a9a-ff2227a1f754" />
 
-68. Gini aja ga apa kan?
+- Gini aja ga apa kan?
 
 <img width="843" height="1031" alt="image" src="https://github.com/user-attachments/assets/eecd6252-79b7-4e56-b364-9dd342464476" />
 <img width="839" height="1044" alt="image" src="https://github.com/user-attachments/assets/9a4e42c2-756b-4ada-b19e-767890c66148" />
 <img width="809" height="1048" alt="image" src="https://github.com/user-attachments/assets/f5578426-f35f-43f0-95be-4c163d2441dc" />
 
-69. Gini?
+- Gini?
 
 <img width="804" height="1021" alt="image" src="https://github.com/user-attachments/assets/12af8387-fbb4-4339-97da-54a3f5b6b8ab" />
 <img width="781" height="1049" alt="image" src="https://github.com/user-attachments/assets/f719bab0-1691-4ddc-bb41-570a3a536792" />
 
-70. Gini?!
+- Gini?!
 
 <img width="852" height="916" alt="image" src="https://github.com/user-attachments/assets/f6ca52cb-b49b-4da9-9dfc-9dc25ca85770" />
