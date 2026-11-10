@@ -116,5 +116,5 @@ const handleLogin = () => {
 
 ---
 
-## Video Demo
-[MASUKKAN LINK YOUTUBE / GOOGLE DRIVE MU DI SINI YAMADA!]
+## Video Demo & Presentasi
+https://drive.google.com/file/d/1-goMx9WUbGiG4Mt1NMLvu4yYDF3CBM7C/view?usp=sharing
