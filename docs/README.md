@@ -9,6 +9,11 @@
 **Education** - Platform Edukasi All in One untuk membantu siswa belajar & memantau progress belajar secara interaktif
 
 # Screenshots
+<img width="1080" height="2392" alt="photo_1_2026-11-10_13-45-21" src="https://github.com/user-attachments/assets/3752c028-9a26-4dd0-977c-78b0dc80b2c7" />
+<img width="1080" height="2392" alt="photo_5_2026-11-10_13-45-21" src="https://github.com/user-attachments/assets/50253fa7-5315-4d4a-849e-cd555e2e29ea" />
+<img width="1080" height="2392" alt="photo_4_2026-11-10_13-45-21" src="https://github.com/user-attachments/assets/f132ea27-5a62-4e69-96cb-abf0a3206312" />
+<img width="1080" height="2392" alt="photo_3_2026-11-10_13-45-21" src="https://github.com/user-attachments/assets/1c427daa-4663-40a7-96be-4887a334216a" />
+<img width="1080" height="2392" alt="photo_2_2026-11-10_13-45-21" src="https://github.com/user-attachments/assets/b35ae6b1-5d51-4b63-85f7-9db60643d888" />
 
 ## Cara Menjalankan Aplikasi
 1. Pastikan Node.js dan Git sudah terinstal.
